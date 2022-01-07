@@ -10,14 +10,9 @@
             "32": "images/icon32.png"
         },
         "default_title": "Github Accentify",
-        "default_popup": {
-            "html": "popup.html",
-            "width": 300,
-            "height": 200
-        }
+        "default_popup": "popup.html"
     },
 
-    "default_locale": "en_US",
     "description": "Personalize your Github Experience",
 
     "author": {
