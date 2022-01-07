@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Github Accentify",
+    "version": "0.1-a",
+
+    "action": {
+        "default_icon": {
+            "16": "images/icon16.png",
+            "24": "images/icon24.png",
+            "32": "images/icon32.png"
+        },
+        "default_title": "Github Accentify",
+        "default_popup": {
+            "html": "popup.html",
+            "width": 300,
+            "height": 200
+        }
+    },
+
+    "default_locale": "en_US",
+    "description": "Personalize your Github Experience",
+
+    "author": {
+        "name": "Jariel Que",
+        "url": "https://github.com/nafunii"
+    },
+
+    "host_permissions": [
+        "https://www.github.com/"
+    ]
+
+}
