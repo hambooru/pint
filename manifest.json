@@ -10,7 +10,9 @@
             "32": "images/icon32.png"
         },
         "default_title": "Github Accentify",
+
         "default_popup": "popup.html"
+
     },
 
     "description": "Personalize your Github Experience",
@@ -22,6 +24,18 @@
 
     "host_permissions": [
         "https://www.github.com/"
-    ]
+    ],
+
+    "content_scripts": [{
+        "matches": ["https://*.github.com/*"],
+        "css": ["styles/accentify.css"]
+    }],
+
+    "permissions": [
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
 
 }

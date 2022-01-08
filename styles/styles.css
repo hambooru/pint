@@ -1,0 +1,29 @@
+/* Elements */
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    margin: 0 0;
+    font-size: 1.5em;
+}
+
+#title {
+    height: 64px;
+    background-color: bisque;
+    width: 400px;
+    position: relative;
+}
+
+.logo {
+    width: 64px;
+    vertical-align: middle;
+}
+
+
+/* Generics */
+
+.inb {
+    display: inline-block;
+}

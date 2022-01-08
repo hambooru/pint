@@ -1,0 +1,18 @@
+:root {
+    --color-calendar-graph-day-L1-bg: rgba(236, 150, 222, 0.438) !important;
+    --color-calendar-graph-day-L2-bg: rgba(236, 150, 222, 0.63) !important;
+    --color-calendar-graph-day-L3-bg: rgba(236, 150, 222, 0.884) !important;
+    --color-calendar-graph-day-L4-bg: #ec96deff !important;
+    --color-accent-emphasis: #ec96deff !important;
+    --color-btn-primary-bg: #ec96deff !important;
+    --color-btn-primary-hover-bg: #ec96deff !important;
+}
+
+.Progress-item.rounded-2 {
+    background-color: var(--color-calendar-graph-day-L4-bg) !important;
+}
+
+.js-highlight-blob {
+    fill: var(--color-calendar-graph-day-L2-bg) !important;
+    stroke: var(--color-calendar-graph-day-L3-bg) !important;
+}
