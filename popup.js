@@ -8,9 +8,7 @@ changeColor.addEventListener("change", async() => {
     let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
     var accent1 = changeColor.value;
-    chrome.storage.sync.set({ a1: accent1 }, () => {
-        alert("Color set to " + accent1);
-    });
+    chrome.storage.sync.set({ a1: accent1 });
 
     chrome.scripting.executeScript({
         target: { tabId: tab.id },

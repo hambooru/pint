@@ -9,13 +9,13 @@
             "24": "images/icon24.png",
             "32": "images/icon32.png"
         },
-        "default_title": "Github Accentify",
+        "default_title": "Gitccentify",
 
         "default_popup": "popup.html"
 
     },
 
-    "description": "Personalize your Github Experience",
+    "description": "Personalize your Github Experience by theming it to your own style.",
 
     "author": {
         "name": "Jariel Que",
