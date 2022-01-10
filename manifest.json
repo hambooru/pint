@@ -23,16 +23,19 @@
     },
 
     "host_permissions": [
-        "https://www.github.com/"
+        "https://*.github.com/"
     ],
 
     "content_scripts": [{
+        "run_at": "document_end",
         "matches": ["https://*.github.com/*"],
-        "css": ["styles/accentify.css"]
+        "js": ["onload.js"]
     }],
 
     "permissions": [
-        "activeTab"
+        "storage",
+        "scripting",
+        "tabs"
     ],
     "background": {
         "service_worker": "background.js"
