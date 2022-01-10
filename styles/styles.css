@@ -10,10 +10,11 @@ h1 {
 }
 
 #title {
-    height: 64px;
-    background-color: bisque;
-    width: 400px;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    width: 300px;
     position: relative;
+    padding: 0 0 20px 0;
 }
 
 .logo {
@@ -35,4 +36,10 @@ h1 {
     margin: 10px;
     border: none;
     border-radius: 2px;
+}
+
+.vertcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

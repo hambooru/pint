@@ -16,7 +16,7 @@ chrome.action.onClicked.addListener((tab) => {
     chrome.scripting.executeScript({
         target: { tabId: tab.id },
         files: ['popup.js']
-    });
+    }, () => chrome.runtime.lastError);
 });
 
 
@@ -24,5 +24,5 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     chrome.scripting.executeScript({
         target: { tabId: tabId },
         files: ['onload.js']
-    });
+    }, () => chrome.runtime.lastError);
 });
