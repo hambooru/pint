@@ -34,7 +34,7 @@ So to contribute, just make sure to make a PR on the `dev` branch.
 ## Supporting this project
 This project is free and open-source with no intentions of ever going paid.
 
-If you really want to though, you may [buy me a coffee](https://www.buymeacoffee.com/nafu), to help improve this project further. Thanks a lot!
+If you really want to though, you can star the project or you may [buy me a coffee](https://www.buymeacoffee.com/nafu), to help improve this project further. Thanks a lot!
 
 ## License 
 This extension is licensed under the GPLv3 License.
