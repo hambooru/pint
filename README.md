@@ -2,13 +2,10 @@
     <img width="50" src="https://github.com/nafunii/gh-accentify/blob/main/images/icon16.png?raw=true" alt="Profile Picture">
     <br> · Gitccentify ·
 	<br> Personalize your GitHub experience by theming it to your own style!</p>
-	<hr>
-	<p align="center">  <strong>⚠️ This project is heavily under development. ⚠️</strong>
-	<br> <em>Things may and will break probably in the future, some things may also change.</em>
 </p>
 <hr>
 
-![paHIBp6Vv9](https://user-images.githubusercontent.com/53419401/148716438-100e099d-02bb-41ae-b4ab-64c252131cd4.gif)
+![nFEf2ry1pk](https://user-images.githubusercontent.com/53419401/148857411-7896a24a-2374-4d64-a267-d1f599717a24.gif)
 
 ## Disclaimer
 *This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with GitHub, Inc. and Git, or any of its subsidiaries or its affiliates.*
@@ -37,7 +34,7 @@ So to contribute, just make sure to make a PR on the `dev` branch.
 ## Supporting this project
 This project is free and open-source with no intentions of ever going paid.
 
-If you really want to though, you may [buy me a coffee](https://www.buymeacoffee.com/nafu), to help improve this project further. Thanks a lot!
+If you really want to though, you can star the project or you may [buy me a coffee](https://www.buymeacoffee.com/nafu), to help improve this project further. Thanks a lot!
 
 ## License 
 This extension is licensed under the GPLv3 License.
