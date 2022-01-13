@@ -14,10 +14,10 @@
 Gitccentify taps into GitHub's css and changes it according to what you select on the extension popup.
 
 ## Installation
-You can install this extension via the Chrome Web Store (coming soon) or manually.
+You can install this extension via the Chrome Web Store or manually.
 
 ### Chrome Web Store
-(Chrome Web Store Link Soon)
+Install it here: [Chrome Web Store](https://chrome.google.com/webstore/detail/mjhmdkcefcklflcmmokoahfdodcpeobg)
 
 ### Manual Installation
 1. Clone/Download this repository or download the latest [release](https://github.com/nafunii/gh-accentify/releases).
