@@ -1,25 +1,49 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
+  "manifest_version": 3,
+  "name": "Pint for GitHub",
+  "version": "2.0",
+
+  "icons": {
+    "16": "pint-logo.png",
+    "48": "pint-logo.png",
+    "128": "pint-logo.png"
+  },
+
+  "action": {
+      "default_icon": {
+          "16": "pint-logo.png",
+          "24": "pint-logo.png",
+          "32": "pint-logo.png"
+      },
+      "default_title": "Pint for GitHub",
+      "default_popup": "index.html"
+
+  },
+
+  "description": "pint is a browser extension that makes your github experience colorful, just the way you like it",
+
+  "author": {
+      "name": "Jariel Que",
+      "url": "https://github.com/fuwaa"
+  },
+
+  "host_permissions": [
+      "https://*.github.com/"
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+
+  "content_scripts": [{
+      "run_at": "document_end",
+      "matches": ["https://*.github.com/*"],
+      "js": ["onload.js"],
+      "css": ["main.css"]
+  }],
+
+  "permissions": [
+      "storage",
+      "scripting"
+  ],
+  "background": {
+      "service_worker": "background.js"
+  }
+
 }
