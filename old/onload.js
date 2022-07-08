@@ -8,6 +8,8 @@ chrome.storage.sync.get('a1', ({ a1 }) => {
 
 });
 
+let r = document.querySelector(':root');
+
 function updateAccents(a1) {
     document.querySelector(':root').style.setProperty('--color-calendar-graph-day-L4-bg', a1 + "ff", "important");
     document.querySelector(':root').style.setProperty('--color-calendar-graph-day-L3-bg', a1 + "c5", "important");

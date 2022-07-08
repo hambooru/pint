@@ -1,20 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import logo from './assets/images/pint.svg';
 import './assets/styles/App.css';
-import AccentChange from './components/AccentChange';
-import BackgroundChange from './components/BackgroundChange';
-import Header from './components/Header';
-import Samples from './components/Samples';
+import Popup from './views/Popup';
+import Options from './views/Options';
 
-function App() {
+export default function App() {
+
+  const [isOptionsUi, setOptionsUI] = useState(window.innerWidth > 375);
+
+  const updateMedia = () => {
+    setOptionsUI(window.innerWidth > 375);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
   return (
     <div className="relative">
-      <Header/>
-      <Samples />
-      <AccentChange/>
-      <BackgroundChange/>
+      {isOptionsUi ? 
+      ( <Options/>
+        ) : (
+        <Popup />
+      )}
     </div>
   );
 }
-
-export default App;

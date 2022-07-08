@@ -1,6 +1,5 @@
 import react from "react";
-import logo from "../assets/images/pint.svg";
-import "../assets/styles/App.css";
+import "../../assets/styles/App.css";
 
 export default function Samples() {
   return (
@@ -10,33 +9,32 @@ export default function Samples() {
         <div className="flex-col">
           <div className="flex flex-row items-center">
             <div
-              style={{ backgroundColor: '#ff3847' }}
+              style={{ backgroundColor: "#ff3847" }}
+              className="w-5 h-5 p-1 ml-1 my-1  rounded-l-lg"
+            ></div>
+            <div
+              style={{ backgroundColor: "#fc3847" }}
+              className="w-5 h-5 p-1 mr-1 my-1  rounded-r-lg"
+            ></div>
+            <div
+              style={{ backgroundColor: "#ff3847" }}
               className="w-5 h-5 p-1 m-1  rounded-lg"
             ></div>
             <div
-              style={{ backgroundColor: '#ff3847' }}
+              style={{ backgroundColor: "#ff3847" }}
               className="w-5 h-5 p-1 m-1  rounded-lg"
             ></div>
             <div
-              style={{ backgroundColor: '#ff3847' }}
+              style={{ backgroundColor: "#ff3847" }}
               className="w-5 h-5 p-1 m-1  rounded-lg"
             ></div>
             <div
-              style={{ backgroundColor: '#ff3847' }}
+              style={{ backgroundColor: "#ff3847" }}
               className="w-5 h-5 p-1 m-1  rounded-lg"
             ></div>
-            <div
-              style={{ backgroundColor: '#ff3847' }}
-              className="w-5 h-5 p-1 m-1  rounded-lg"
-            ></div>
-            <div
-              style={{ backgroundColor: '#ff3847' }}
-              className="w-5 h-5 p-1 m-1  rounded-lg"
-            ></div>
-
-          </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
