@@ -468,3 +468,11 @@ chrome.runtime.onInstalled.addListener(() => {
         console.log("Setup: Configuring " + initialSetting + " >> " + defaultColorScheme[initialSetting]);
     });
 })
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  chrome.scripting.executeScript({
+      target: { tabId: tabId },
+      files: ['initial.js']
+  }, () => chrome.runtime.lastError);
+});
+

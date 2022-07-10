@@ -40,7 +40,12 @@
       "matches": ["https://*.github.com/*"],
       "js": ["initial.js"],
       "css": ["unhide.css"]
+    },{
+      "run_at": "document_idle",
+      "matches": ["https://*.github.com/*"],
+      "js": ["initial.js"]
     }
+
   ],
 
   "permissions": ["storage", "scripting"],

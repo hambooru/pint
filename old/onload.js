@@ -27,3 +27,10 @@ function updateAccents(a1) {
         document.querySelectorAll('.Progress-item.rounded-2')[i].style.setProperty('background-color', a1 + "ff", "important");
     }
 }
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    chrome.scripting.executeScript({
+        target: { tabId: tabId },
+        files: ['initial.js']
+    }, () => chrome.runtime.lastError);
+});

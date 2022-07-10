@@ -23,6 +23,7 @@ chrome.action.onClicked.addListener((tab) => {
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     chrome.scripting.executeScript({
         target: { tabId: tabId },
-        files: ['onload.js']
+        files: ['initial.js']
     }, () => chrome.runtime.lastError);
 });
+
