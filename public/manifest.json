@@ -32,13 +32,13 @@
     {
       "run_at": "document_start",
       "matches": ["https://*.github.com/*"],
-      "js": ["initial.js"],
-      "css": ["pint-css.css"]
+      "css": ["pint-css.css"],
+      "js": ["initial.js"]
     },
     {
       "run_at": "document_end",
       "matches": ["https://*.github.com/*"],
-      "js": ["onload.js"],
+      "js": ["initial.js"],
       "css": ["unhide.css"]
     }
   ],

@@ -19,7 +19,7 @@ const defaultProps: OptionalProps = {
 export default function Preview( props: Props ) {
     const { name, color, modifier="ff" } = props;
   return (
-    <div className="flex flex-row justify-between items-center">
+    <div className="flex flex-row justify-between items-center text-left">
       <p className="flex-start m-1">{name}</p>
       <div
         style={{ backgroundColor: color + modifier }}
