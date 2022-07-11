@@ -9,7 +9,7 @@ export default function App() {
   const [isOptionsUi, setOptionsUI] = useState(window.innerWidth > 375);
 
   const updateMedia = () => {
-    setOptionsUI(window.innerWidth > 375);
+    setOptionsUI(window.innerWidth > 475);
   };
 
   useEffect(() => {

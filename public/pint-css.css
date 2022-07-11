@@ -440,6 +440,7 @@
     --color-calendar-halloween-graph-day-L4-bg: initial !important;
     --color-calendar-graph-day-bg: initial !important;
     --color-calendar-graph-day-border: initial !important;
+    --color-calendar-graph-day-bg : initial !important;
     --color-calendar-graph-day-L1-bg: initial !important;
     --color-calendar-graph-day-L2-bg: initial !important;
     --color-calendar-graph-day-L3-bg: initial !important;
@@ -452,4 +453,21 @@
 
 html, body {
     visibility: hidden !important
+}
+
+.Progress-item {
+    background-color: var(--color-calendar-graph-day-L4-bg) !important;
+}
+
+.js-highlight-blob {
+    fill:  var(--color-calendar-graph-day-L3-bg) !important;
+    stroke: var(--color-calendar-graph-day-L4-bg) !important;
+}
+
+a,p {
+    color: var(--color-scale-gray-1) !important;
+}
+
+span {
+    color: var(--color-scale-gray-0) !important;
 }

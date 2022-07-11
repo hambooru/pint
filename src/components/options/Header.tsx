@@ -5,7 +5,7 @@ import { IoMdSettings } from "react-icons/io";
 
 export default function Header() {
   return (
-          <div className="flex flex-row rounded-lg mb-1 m-2 mx-3 p-1  justify-between items-center">
+          <div className="flex flex-row rounded-lg mb-1 m-2 mx-3 p-1 justify-between items-center">
               <div className="flex flex-row">
                 <img src={logo} className="flex-none w-12" alt="logo" />
                 <div className="flex-col p-1 text-white">

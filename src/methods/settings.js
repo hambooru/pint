@@ -1,4 +1,4 @@
-defaultColorScheme = {
+export const settings = {
     "__color_accent_emphasis" : "#1f6feb",
     "__color_accent_fg" : "#58a6ff",
     "__color_accent_muted" : "rgba(56, 139, 253, 0.4)",
@@ -448,30 +448,3 @@ defaultColorScheme = {
     "__color_underlinenav_icon" : "#6e7681",
     "__color_workflow_card_header_shadow" : "rgba(27, 31, 35, 0.04)"
   };
-  
-initialSettings = Object.keys(defaultColorScheme);
-
-const filter = {
-    url: [{
-        urlMatches: 'https://*.github.com/*',
-    }, ],
-};
-
-// loop through all the keys in the defaultColorScheme object
-// and set the value of the key to the value of the key in the defaultColorScheme object
-chrome.runtime.onInstalled.addListener(() => {
-    initialSettings.forEach((initialSetting) => {
-        var key = {};
-        key[`${initialSetting}`] = defaultColorScheme[initialSetting];
-        chrome.storage.local.set(key);
-        console.log("Setup: Configuring " + initialSetting + " >> " + defaultColorScheme[initialSetting]);
-    });
-})
-
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  chrome.scripting.executeScript({
-      target: { tabId: tabId },
-      files: ['initial.js']
-  }, () => chrome.runtime.lastError);
-});
-
