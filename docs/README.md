@@ -10,8 +10,9 @@
 
 ###### INFO: Gitccentify is undergoing a major overhaul and will be renamed to pint. Information on this readme may be out of date.
 
+[pint](https://projects.fuwa.sh/pint/) is a browser extension that makes your github experience colorful, just the way you like it. 
 
-[pint](https://projects.fuwa.sh/pint/) is a browser extension that makes your github experience colorful, just the way you like it.
+💭 Looking for the latest changes? Check the `pint-overhaul` branch!
 <br>
 <br>
 
