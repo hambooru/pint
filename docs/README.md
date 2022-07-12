@@ -8,38 +8,42 @@
 
 <hr>
 
-###### INFO: Gitccentify is undergoing a major overhaul and will be renamed to pint. Information on this readme may be out of date.
+###### Traveller Information: You are on the main dev't branch. Things break here. For latest stable check branch v1.
 
-[pint](https://projects.fuwa.sh/pint/) is a browser extension that makes your github experience colorful, just the way you like it. 
+[pint](https://projects.fuwa.sh/pint/) is a theming engine that allows you to rice your github experience.
 
-💭 Looking for the latest changes? Check the `pint-overhaul` branch!
+![pintpreview](https://go.fuwa.sh/u/ufuvwg.png)
 <br>
 <br>
 
-![nFEf2ry1pk](https://user-images.githubusercontent.com/53419401/148857411-7896a24a-2374-4d64-a267-d1f599717a24.gif)
 
 
 
+## installation
+you can install this extension via the chrome web store (old version) or manually.
 
-## Installation
-You can install this extension via the Chrome Web Store or manually.
+### chrome web store installation
+please note  that the version in the chrome web store is V1, which is very bad and outdated.
 
 ![Get it on the Chrome Web Store](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png)
 
-### Manual Installation
-1. Clone/Download this repository or download the latest [release](https://github.com/nafunii/gh-accentify/releases).
-2. Extract the downloaded zip file somewhere.
-3. Go to your Chrome Extensions and turn on Developer Mode.
-4. Click on `Load Unpacked` and select on the folder where you extracted the zip file.
-5. Profit!
+### manual/source installation
+1. clone this repository
+2. run `yarn build` or `yabai`
+3. open extension settings in chrome/brave/chromium
+4. turn on developer mode
+5. load unpacked extension 
+6. load the build folder
 
-## Roadmap
-As gitccentify stagnated in development, I decided to overhaul gitccentify while it's not there in the mainstream yet. The roadmap I plan to follow is right here/
-- [ ] Overhaul Gitccentify and release as pint. `*RELEASE MARK`
-- [ ] Implement additional features in my backlog
+## roadmap
+please check #12.
 
-## Contributing
-Contributions are currently on hold as I overhaul this project. I'll be accepting contibutions once pint is released.
+
+
+## contributing
+contributions are welcome ❤️. however, please do keep in mind that this is a very early project and things are bound to be messy. i mean just look at these linting errors.
+<br><br>
+![lintlmao](https://go.fuwa.sh/u/9eTsWq.png)
 
 
 

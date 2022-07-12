@@ -53,6 +53,7 @@ export default function QuickChange() {
   function paintBg() {
     setBgColor(color);
     bgGen(color);
+    updateText(generateAccent(color, -130));
   }
 
   function paintText() {

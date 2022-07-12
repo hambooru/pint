@@ -464,6 +464,10 @@ html, body {
     stroke: var(--color-calendar-graph-day-L4-bg) !important;
 }
 
+svg {
+    color: var(--color-scale-gray-0) !important;
+}
+
 /* a,p {
     color: var(--color-scale-gray-1) !important;
 }
