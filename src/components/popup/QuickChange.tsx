@@ -7,7 +7,7 @@ import Preview from "../global/Preview";
 import CardTitle from "../global/CardTitle";
 import { pintSet, pintSetNoReload, updateMultiple, pintGetUpdate } from "../../methods/helper";
 import * as quickScheme from "../../methods/quickScheme";
-import { bgGen, generateAccent, updateViaQuickScheme, } from "../../methods/schemeGen";
+import { bgGen, generateAccent, updateText, updateViaQuickScheme, } from "../../methods/schemeGen";
 import { bgcolor } from "@mui/system";
 
 var defaultValue = "#c0ffee" 
@@ -26,10 +26,12 @@ export default function QuickChange() {
     pintGetUpdate("__color_btn_primary_active_bg", setActiveButton)
     pintGetUpdate("__color_btn_primary_focus_bg", setClickedButton)
     pintGetUpdate("__color_btn_primary_disabled_bg", setDisabledButton)
+    pintGetUpdate("__color_scale_gray_1", setTextColor)
   }) 
 
   const [bgColor, setBgColor] = react.useState(`${defaultValue}`);
   const [color, setColor] = react.useState(`${defaultValue}`);
+  const [textColor, setTextColor] = react.useState(`${defaultValue}`);
 
   // l1-l4 and other used shit
   const [l1, setL1] = react.useState(`${defaultValue}`);
@@ -51,6 +53,11 @@ export default function QuickChange() {
   function paintBg() {
     setBgColor(color);
     bgGen(color);
+  }
+
+  function paintText() {
+    updateText(color);
+    setTextColor(color);
   }
 
   return (
@@ -103,13 +110,13 @@ export default function QuickChange() {
             id="textColorHex"
             label="text color"
             disabled={true}
-            value={bgColor}
+            value={textColor}
             variant="outlined"
             size="small"
           />
           <button
             className="bg-[#0d1117] hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-2 ml-2 mb-2 mx-2 rounded-full"
-            onClick={paintBg}
+            onClick={paintText}
           >
             <IoIosBrush className="text-xl p-0 text-white" />
           </button>

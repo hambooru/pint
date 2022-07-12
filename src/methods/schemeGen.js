@@ -92,6 +92,11 @@ export function bgGen(color) {
   chrome.tabs.reload();
 }
 
+export function updateText(color) {
+  updateMultiple(qs.TextColor, color);
+  chrome.tabs.reload();
+}
+
 export function accentGen(color)  {
 
 }

@@ -464,10 +464,10 @@ html, body {
     stroke: var(--color-calendar-graph-day-L4-bg) !important;
 }
 
-a,p {
+/* a,p {
     color: var(--color-scale-gray-1) !important;
 }
 
 span {
     color: var(--color-scale-gray-0) !important;
-}
+} */
