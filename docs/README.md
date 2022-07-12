@@ -25,7 +25,7 @@ you can install this extension via the chrome web store (old version) or manuall
 ### chrome web store installation
 please note  that the version in the chrome web store is V1, which is very bad and outdated.
 
-![Get it on the Chrome Web Store](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png)
+<a href="https://chrome.google.com/webstore/detail/gitccentify/mjhmdkcefcklflcmmokoahfdodcpeobg"><img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png" /></a>
 
 ### manual/source installation
 1. clone this repository
