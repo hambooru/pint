@@ -1,33 +1,30 @@
 /*global chrome*/
 
-export function pintSet( setting, value ) {
-    var pintKey = {};
-    pintKey[`${setting}`] = value;
-    var settingVar = setting.replace(/_/g, "-");
-    chrome.storage.local.set(pintKey);
-    chrome.tabs.reload();
-}
-
-export function pintSetNoReload( setting, value ) {
+export function pintSet(setting, value) {
   var pintKey = {};
   pintKey[`${setting}`] = value;
-  var settingVar = setting.replace(/_/g, "-");
   chrome.storage.local.set(pintKey);
+  chrome.tabs.reload();
 }
 
+export function pintSetNoReload(setting, value) {
+  var pintKey = {};
+  pintKey[`${setting}`] = value;
+  chrome.storage.local.set(pintKey);
+}
 
 export function pintGet(setting, cb) {
   var output = "";
   chrome.storage.local.get([`${setting}`], function (result) {
-    output = result[`${setting}`]
+    output = result[`${setting}`];
     cb(output);
-  })
+  });
 }
 
 export function pintGetUpdate(setting, func) {
   chrome.storage.local.get([`${setting}`], function (result) {
     func(result[`${setting}`]);
-  })
+  });
 }
 
 export function updateMultiple(array, color) {

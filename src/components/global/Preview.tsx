@@ -1,23 +1,18 @@
-import react from "react";
 import "../../assets/styles/App.css";
 
 interface RequiredProps {
-    name: string,
-    color: string,
+  name: string;
+  color: string;
 }
 
 interface OptionalProps {
-    modifier?: string
+  modifier?: string;
 }
 
 interface Props extends RequiredProps, OptionalProps {}
 
-const defaultProps: OptionalProps = { 
-    modifier: "ff"
-};
-
-export default function Preview( props: Props ) {
-    const { name, color, modifier="ff" } = props;
+export default function Preview(props: Props) {
+  const { name, color, modifier = "ff" } = props;
   return (
     <div className="flex flex-row justify-between items-center text-left">
       <p className="flex-start m-1">{name}</p>

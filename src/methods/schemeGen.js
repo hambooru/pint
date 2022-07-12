@@ -1,6 +1,6 @@
 /*global chrome*/
-import { pintGet, pintSet, pintGetUpdate, pintSetNoReload, updateMultiple } from './helper.js';
-import * as qs from './quickScheme.js';
+import { pintSetNoReload, updateMultiple } from "./helper.js";
+import * as qs from "./quickScheme.js";
 
 // function to convert hex to rgb
 export function hexToRgb(hex) {
@@ -21,13 +21,16 @@ export function rgbToHex(r, g, b) {
 }
 
 export function rgba2hex(orig) {
-  var a, isPercent,
-    rgb = orig.replace(/\s/g, '').match(/^rgba?\((\d+),(\d+),(\d+),?([^,\s)]+)?/i),
-    alpha = (rgb && rgb[4] || "").trim(),
-    hex = rgb ?
-    (rgb[1] | 1 << 8).toString(16).slice(1) +
-    (rgb[2] | 1 << 8).toString(16).slice(1) +
-    (rgb[3] | 1 << 8).toString(16).slice(1) : orig;
+  var a,
+    rgb = orig
+      .replace(/\s/g, "")
+      .match(/^rgba?\((\d+),(\d+),(\d+),?([^,\s)]+)?/i),
+    alpha = ((rgb && rgb[4]) || "").trim(),
+    hex = rgb
+      ? (rgb[1] | (1 << 8)).toString(16).slice(1) +
+        (rgb[2] | (1 << 8)).toString(16).slice(1) +
+        (rgb[3] | (1 << 8)).toString(16).slice(1)
+      : orig;
 
   if (alpha !== "") {
     a = alpha;
@@ -35,7 +38,7 @@ export function rgba2hex(orig) {
     a = 1;
   }
   // multiply before convert to HEX
-  a = ((a * 255) | 1 << 8).toString(16).slice(1)
+  a = ((a * 255) | (1 << 8)).toString(16).slice(1);
   hex = hex + a;
 
   return hex;
@@ -64,10 +67,10 @@ export function generateAccent(hex, modifier) {
 
 export function updateViaQuickScheme(color) {
   var gradient = generateHexGradients(color);
-  pintSetNoReload("__color_calendar_graph_day_L4_bg", `${gradient[0]}` + "ff");
-  pintSetNoReload("__color_calendar_graph_day_L3_bg", `${gradient[0]}` + "c5");
-  pintSetNoReload("__color_calendar_graph_day_L2_bg", `${gradient[0]}` + "8a");
-  pintSetNoReload("__color_calendar_graph_day_L1_bg", `${gradient[0]}` + "54");
+  pintSetNoReload("__color_calendar_graph_day_L4_bg", `${gradient[0]}ff`);
+  pintSetNoReload("__color_calendar_graph_day_L3_bg", `${gradient[0]}c5`);
+  pintSetNoReload("__color_calendar_graph_day_L2_bg", `${gradient[0]}8a`);
+  pintSetNoReload("__color_calendar_graph_day_L1_bg", `${gradient[0]}54`);
   pintSetNoReload("__color_accent_emphasis", gradient[4]);
   pintSetNoReload("__color_btn_primary_bg", gradient[5]);
   pintSetNoReload("__color_btn_primary_hover_bg", gradient[4]);
@@ -79,16 +82,16 @@ export function updateViaQuickScheme(color) {
 
 export function bgGen(color) {
   updateMultiple(qs.BG9, color);
-  updateMultiple(qs.ScaleBlack, generateAccent(color, 10))
-  updateMultiple(qs.BG8, generateAccent(color, -10))
-  updateMultiple(qs.BG7, generateAccent(color, -20))
-  updateMultiple(qs.BG6, generateAccent(color, -30))
-  updateMultiple(qs.BG5, generateAccent(color, -50))
-  updateMultiple(qs.BG4, generateAccent(color, -70))
-  updateMultiple(qs.BG3, generateAccent(color, -90))
-  updateMultiple(qs.BG2, generateAccent(color, -110))
-  updateMultiple(qs.BG1, generateAccent("#ffffff", 0))
-  updateMultiple(qs.BG0, generateAccent(color, -130))
+  updateMultiple(qs.ScaleBlack, generateAccent(color, 10));
+  updateMultiple(qs.BG8, generateAccent(color, -10));
+  updateMultiple(qs.BG7, generateAccent(color, -20));
+  updateMultiple(qs.BG6, generateAccent(color, -30));
+  updateMultiple(qs.BG5, generateAccent(color, -50));
+  updateMultiple(qs.BG4, generateAccent(color, -70));
+  updateMultiple(qs.BG3, generateAccent(color, -90));
+  updateMultiple(qs.BG2, generateAccent(color, -110));
+  updateMultiple(qs.BG1, generateAccent("#ffffff", 0));
+  updateMultiple(qs.BG0, generateAccent(color, -130));
   chrome.tabs.reload();
 }
 
@@ -97,6 +100,4 @@ export function updateText(color) {
   chrome.tabs.reload();
 }
 
-export function accentGen(color)  {
-
-}
+export function accentGen(color) {}

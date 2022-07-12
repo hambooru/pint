@@ -1,14 +1,5 @@
-import {
-  FormControl,
-  InputLabel,
-  MenuItem,
-  NativeSelect,
-  Select,
-  Switch,
-} from "@mui/material";
-import react from "react";
+import { Switch } from "@mui/material";
 import "../../assets/styles/App.css";
-import Preview from "../global/Preview";
 
 export default function QuickSettings() {
   return (
@@ -20,18 +11,26 @@ export default function QuickSettings() {
             <p className="flex-start my-1">view global user pints?</p>
             <Switch defaultChecked size="small" />
           </div>
-            <form className="flex flex-row justify-between items-center" action="#">
-              <label>select color scheme: </label>
-              <div>
-                <select name="colorschemes" id="lang" defaultValue="1">
-                  <option value="0">Solarized Dark</option>
-                  <option value="1">Github Dark</option>
-                  <option value="2">Github Light</option>
-                </select>
-              </div>
-            </form>
-          </div>
+          <form
+            className="flex flex-row justify-between items-center"
+            action="#"
+          >
+            <label>select color scheme: </label>
+            <div>
+              <select
+                title="colorSchemeSelector"
+                name="colorschemes"
+                id="lang"
+                defaultValue="1"
+              >
+                <option value="0">Solarized Dark</option>
+                <option value="1">Github Dark</option>
+                <option value="2">Github Light</option>
+              </select>
+            </div>
+          </form>
         </div>
       </div>
+    </div>
   );
 }

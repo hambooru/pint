@@ -1,16 +1,16 @@
-import React from 'react';
-import '../assets/styles/App.css';
-import QuickChange from '../components/popup/QuickChange';
-import Header from '../components/popup/Header';
+import React from "react";
+import "../assets/styles/App.css";
+import QuickChange from "../components/popup/QuickChange";
+import Header from "../components/popup/Header";
 
-import QuickSettings from '../components/popup/QuickSettings';
+import QuickSettings from "../components/popup/QuickSettings";
 
 function Popup() {
   return (
     <div className="relative text-center">
-      <Header/>
-      <QuickSettings/>
-      <QuickChange/>
+      <Header />
+      <QuickSettings />
+      <QuickChange />
     </div>
   );
 }

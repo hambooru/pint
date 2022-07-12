@@ -1,11 +1,9 @@
-import React, { useState, useEffect }  from 'react';
-import logo from './assets/images/pint.svg';
-import './assets/styles/App.css';
-import Popup from './views/Popup';
-import Options from './views/Options';
+import React, { useState, useEffect } from "react";
+import "./assets/styles/App.css";
+import Popup from "./views/Popup";
+import Options from "./views/Options";
 
 export default function App() {
-
   const [isOptionsUi, setOptionsUI] = useState(window.innerWidth > 375);
 
   const updateMedia = () => {
@@ -18,12 +16,6 @@ export default function App() {
   });
 
   return (
-    <div className="relative">
-      {isOptionsUi ? 
-      ( <Options/>
-        ) : (
-        <Popup />
-      )}
-    </div>
+    <div className="relative">{isOptionsUi ? <Options /> : <Popup />}</div>
   );
 }
