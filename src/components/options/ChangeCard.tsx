@@ -46,8 +46,9 @@ export default function ChangeCard(props: Props) {
   const [current, setCurrent] = react.useState(`${defaultValue}`);
 
   function updateColor() {
-    setCurrent(JSON.stringify(colorPickerColor));
-    pintSetNoReload(settingName, colorPickerColor);
+    var stringifiedColor = `rgba(${colorPickerColor.r},${colorPickerColor.g},${colorPickerColor.b},${colorPickerColor.a})`
+    setCurrent(stringifiedColor);
+    pintSetNoReload(settingName, stringifiedColor);
   }
 
   function updateColorExplicitly(value: string) {

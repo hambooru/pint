@@ -6,18 +6,27 @@ import QuickSettings from '../components/popup/QuickSettings';
 import '../methods/settings.js';
 import { settings } from '../methods/settings';
 import ChangeCard from '../components/options/ChangeCard';
-import Converter from '../components/options/Converter';
 import react from 'react';
 import { HexColorInput, HexColorPicker, RgbaColorPicker } from 'react-colorful';
 import CardTitle from '../components/global/CardTitle';
+import { rgba2hex } from '../methods/schemeGen';
 
 var settingsList = Object.keys(settings);
 
 var defaultValue = { r: 200, g: 150, b: 35, a: 0.5 } 
+var stringifiedColor = `rgba(${defaultValue.r},${defaultValue.g},${defaultValue.b},${defaultValue.a})`
+var defaultHexValue = rgba2hex(stringifiedColor);
 
 export default function Options() {
 
   const [color, setColor] = react.useState(defaultValue);
+  const [hexColor, setHexColor] = react.useState()
+  
+  react.useLayoutEffect(() => {
+    stringifiedColor = `rgba(${color.r},${color.g},${color.b},${color.a})`
+    setHexColor(rgba2hex(stringifiedColor));
+
+  });
 
   return (
       <div className="relative flex flex-col align justify-center items-center">
@@ -27,12 +36,23 @@ export default function Options() {
           <div className=" fixed w-[300px]">
           <Header/>
           <QuickSettings/>
-          <Converter />
+          <div className="flex flex-col rounded-lg mt-2 mx-3 p-1 bg-white">
+      <div className=" bg-whiteflex-start align-left text-l p-1">
+        <p>hex-rgba converter</p>
+        <div className="flex-col">
+          <div className="flex flex-row justify-between items-center">
+            <p className="flex-start my-1">rgb({color.r},{color.g},{color.b},{color.a})</p>
+            <p className="flex-end my-1">{hexColor}</p>
+          </div>
+
+          </div>
+        </div>
+      </div>
           <div className="pint flex flex-row  mb-2 mt-1 mx-2 text-center">
       <div className="flex-1 flex-col rounded-lg m-1 p-1 bg-white">
-      <div className="flex flex-row justify-content text-center justify-center">
-          <CardTitle name="color picker - " />
-        </div>
+      <div className="flex flex-row justify-content text-left justify-center">
+          <CardTitle name="color picker" />
+        </div> 
         <div className="flex justify-content p-1">
           <RgbaColorPicker style={{ width: 258, height: 258 }} color={color} onChange={setColor} />
         </div>

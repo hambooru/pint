@@ -1,6 +1,6 @@
-const key = "pintScheme";
+key = "pintScheme";
 userScheme = {};
-const defaultColorScheme = {
+defaultColorScheme = {
   "__color_canvas_default_transparent" : "rgba(13, 17, 23, 0)",
   "__color_page_header_bg" : "#0d1117",
   "__color_marketing_icon_primary" : "#79c0ff",
@@ -442,6 +442,7 @@ const defaultColorScheme = {
   "__color_calendar_halloween_graph_day_L3_bg" : "#fa7a18",
   "__color_calendar_halloween_graph_day_L4_bg" : "#fddf68",
   "__color_calendar_graph_day_border" : "rgba(27, 31, 35, 0.06)",
+  "__color_calendar_graph_day_bg" : "rgba(0,0,0,0.1)",
   "__color_calendar_graph_day_L1_bg" : "#0e4429",
   "__color_calendar_graph_day_L2_bg" : "#006d32",
   "__color_calendar_graph_day_L3_bg" : "#26a641",
@@ -452,7 +453,7 @@ const defaultColorScheme = {
   "__color_calendar_graph_day_L4_border" : "rgba(255, 255, 255, 0.05)",
 };
 
-var colorSettings = Object.keys(defaultColorScheme);
+colorSettings = Object.keys(defaultColorScheme);
 
 // function initialize() {
   console.log(`Pulling Data from Local Storage`);
@@ -483,3 +484,4 @@ var colorSettings = Object.keys(defaultColorScheme);
     });
     
   });
+
