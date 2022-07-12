@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Pint for GitHub",
+  "version": "2.0",
+
+  "icons": {
+    "16": "pint-logo.png",
+    "48": "pint-logo.png",
+    "128": "pint-logo.png"
+  },
+
+  "action": {
+    "default_icon": {
+      "16": "pint-logo.png",
+      "24": "pint-logo.png",
+      "32": "pint-logo.png"
+    },
+    "default_title": "Pint for GitHub",
+    "default_popup": "index.html"
+  },
+
+  "description": "pint is a browser extension that makes your github experience colorful, just the way you like it",
+
+  "author": {
+    "name": "Jariel Que",
+    "url": "https://github.com/fuwaa"
+  },
+
+  "host_permissions": ["https://*.github.com/"],
+
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["https://*.github.com/*"],
+      "css": ["pint-css.css"],
+      "js": ["initial.js"]
+    },
+    {
+      "run_at": "document_end",
+      "matches": ["https://*.github.com/*"],
+      "js": ["initial.js"],
+      "css": ["unhide.css"]
+    },{
+      "run_at": "document_idle",
+      "matches": ["https://*.github.com/*"],
+      "js": ["initial.js"]
+    }
+
+  ],
+
+  "permissions": ["storage", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "index.html"
+}
