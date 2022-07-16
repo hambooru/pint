@@ -1,3 +1,4 @@
+/*global chrome*/
 defaultColorScheme = {
   __color_accent_emphasis: "#1f6feb",
   __color_accent_fg: "#58a6ff",
@@ -453,14 +454,6 @@ defaultColorScheme = {
 
 initialSettings = Object.keys(defaultColorScheme);
 
-const filter = {
-  url: [
-    {
-      urlMatches: "https://*.github.com/*",
-    },
-  ],
-};
-
 // loop through all the keys in the defaultColorScheme object
 // and set the value of the key to the value of the key in the defaultColorScheme object
 chrome.runtime.onInstalled.addListener(() => {
@@ -475,6 +468,7 @@ chrome.runtime.onInstalled.addListener(() => {
         defaultColorScheme[initialSetting]
     );
   });
+  chrome.tabs.create({ url: "https://pint.sh/success" });
 });
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {

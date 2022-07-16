@@ -48,7 +48,7 @@
     }
   ],
 
-  "permissions": ["storage", "scripting"],
+  "permissions": ["storage", "scripting", "tabs"],
   "background": {
     "service_worker": "background.js"
   },

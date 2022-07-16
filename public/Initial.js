@@ -1,3 +1,4 @@
+/*global chrome*/
 key = "pintScheme";
 userScheme = {};
 defaultColorScheme = {
@@ -474,8 +475,7 @@ colorSettings.forEach((colorSetting) => {
         defaultColorScheme[colorSettingPersist],
         "important"
       );
-    } else;
-    {
+    } else {
       console.log(`Setting ${colorSettingVar}: ${result[colorSetting]}`);
       document
         .querySelector(":root")
