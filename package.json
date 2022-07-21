@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@types/chroma-js": "^2.1.4",
     "@types/chrome": "^0.0.193",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
