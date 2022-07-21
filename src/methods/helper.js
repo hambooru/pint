@@ -3,7 +3,6 @@
 /**
  *  Set a key and autoreload
  *  @param {string} setting - setting to update
- *  @param {string} value - Color to replace the current color with
  */
 export function pintSet(setting, value) {
   var pintKey = {};
@@ -26,7 +25,6 @@ export function pintSetNoReload(setting, value) {
 /**
  *  Gets a setting and calls it back (normally used for react useState)
  *  @param {string} setting - get this setting
- *  @param {string} func - Function to Callback
  */
 export function pintGetUpdate(setting, func) {
   chrome.storage.local.get([`${setting}`], function (result) {
