@@ -456,7 +456,8 @@ defaultColorScheme = {
 initialSettings = Object.keys(defaultColorScheme);
 
 // loop through all the keys in the defaultColorScheme object
-// and set the value of the key to the value of the key in the defaultColorScheme object
+// and set the value of the key to the value of the key in the
+// defaultColorScheme object
 chrome.runtime.onInstalled.addListener(() => {
   initialSettings.forEach((initialSetting) => {
     var key = {};

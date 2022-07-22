@@ -1,9 +1,9 @@
 /*global chrome*/
 import chroma from "chroma-js";
 
+import * as settings from "./colorGroups.js";
 import { pintSetNoReload, updateMultiple } from "./helper.js";
 import * as qs from "./quickScheme.js";
-import * as settings from "./colorGroups.js";
 
 // function to convert hex to rgb
 export function hexToRgb(hex) {
