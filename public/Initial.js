@@ -452,6 +452,7 @@ defaultColorScheme = {
   __color_calendar_graph_day_L2_border: "rgba(255, 255, 255, 0.05)",
   __color_calendar_graph_day_L3_border: "rgba(255, 255, 255, 0.05)",
   __color_calendar_graph_day_L4_border: "rgba(255, 255, 255, 0.05)",
+  __color_text_disabled: "#6e7681",
 };
 
 colorSettings = Object.keys(defaultColorScheme);

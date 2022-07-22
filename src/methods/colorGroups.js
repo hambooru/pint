@@ -350,6 +350,7 @@ export var cg46_6e7681 = [
   "__color_scale_gray_4",
   "__color_switch_track_border",
   "__color_underlinenav_icon",
+  "__color_text_disabled",
 ];
 
 // color group: 46 | default color: #6e768100

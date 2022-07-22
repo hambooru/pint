@@ -450,6 +450,7 @@
   --color-calendar-graph-day-L2-border: initial !important;
   --color-calendar-graph-day-L3-border: initial !important;
   --color-calendar-graph-day-L4-border: initial !important;
+  --color-text-disabled: initial !important;
 }
 
 html,
