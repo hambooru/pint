@@ -450,12 +450,14 @@ defaultColorScheme = {
   __color_underlinenav_border_hover: "rgba(110, 118, 129, 0.4)",
   __color_underlinenav_icon: "#6e7681",
   __color_workflow_card_header_shadow: "rgba(27, 31, 35, 0.04)",
+  __color_text_disabled: "#6e7681",
 };
 
 initialSettings = Object.keys(defaultColorScheme);
 
 // loop through all the keys in the defaultColorScheme object
-// and set the value of the key to the value of the key in the defaultColorScheme object
+// and set the value of the key to the value of the key in the
+// defaultColorScheme object
 chrome.runtime.onInstalled.addListener(() => {
   initialSettings.forEach((initialSetting) => {
     var key = {};

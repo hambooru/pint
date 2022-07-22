@@ -1,4 +1,7 @@
 /*global chrome*/
+import chroma from "chroma-js";
+
+import * as settings from "./colorGroups.js";
 import { pintSetNoReload, updateMultiple } from "./helper.js";
 import * as qs from "./quickScheme.js";
 
@@ -81,17 +84,17 @@ export function updateViaQuickScheme(color) {
 }
 
 export function bgGen(color) {
-  updateMultiple(qs.BG9, color);
-  updateMultiple(qs.ScaleBlack, generateAccent(color, 10));
-  updateMultiple(qs.BG8, generateAccent(color, -10));
-  updateMultiple(qs.BG7, generateAccent(color, -20));
-  updateMultiple(qs.BG6, generateAccent(color, -30));
-  updateMultiple(qs.BG5, generateAccent(color, -50));
-  updateMultiple(qs.BG4, generateAccent(color, -70));
-  updateMultiple(qs.BG3, generateAccent(color, -90));
-  updateMultiple(qs.BG2, generateAccent(color, -110));
-  updateMultiple(qs.BG1, generateAccent("#ffffff", 0));
-  updateMultiple(qs.BG0, generateAccent(color, -130));
+  updateMultiple(settings.cg3_010409, chroma(color).darken().hex());
+  updateMultiple(settings.cg8_0d1117, chroma(color).hex());
+  updateMultiple(settings.cg13_161b22, chroma(color).brighten(0.3).hex());
+  updateMultiple(settings.cg18_238636, chroma(color).brighten(0.6).hex());
+  updateMultiple(settings.cg22_30363d, chroma(color).brighten(0.9).hex());
+  updateMultiple(settings.cg32_484f58, chroma(color).brighten(1.2).hex());
+  updateMultiple(settings.cg46_6e7681, chroma(color).brighten(1.5).hex());
+  updateMultiple(settings.cg55_8b949e, chroma(color).brighten(1.8).hex());
+  updateMultiple(settings.cg64_b1bac4, chroma(color).brighten(2.1).hex());
+  updateMultiple(settings.cg71_c9d1d9, chroma(color).brighten(2.4).hex());
+  updateMultiple(settings.cg84_f0f6fc, chroma(color).brighten(2.7).hex());
   chrome.tabs.reload();
 }
 
