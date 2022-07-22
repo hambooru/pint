@@ -1,6 +1,6 @@
-export var black = [ "cg3_010409" ];
+export var black = ["cg3_010409"];
 
-export var white = [ "cg106_ffffff" ];
+export var white = ["cg106_ffffff"];
 
 export var gray = [
   "cg8_0d1117",
