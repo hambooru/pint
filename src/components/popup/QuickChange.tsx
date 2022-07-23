@@ -4,7 +4,7 @@ import { HexColorPicker, HexColorInput } from "react-colorful";
 import { TextField } from "@mui/material";
 import { IoIosBrush } from "react-icons/io";
 import CardTitle from "../global/CardTitle";
-import { pintGetUpdate } from "../../methods/helper";
+import { pintGetUpdate } from "../../methods/helpers/storageHelper";
 import {
   bgGen,
   generateAccent,

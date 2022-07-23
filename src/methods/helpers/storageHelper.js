@@ -1,7 +1,5 @@
 /*global chrome*/
 
-import chroma from "chroma-js";
-
 /**
  *  Set a key and autoreload
  *  @param {string} setting - setting to update
