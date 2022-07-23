@@ -2,7 +2,7 @@ import chroma from "chroma-js";
 
 import * as settings from "../config/colorGroups.js";
 
-import {pintGetUpdate, updateMultiple} from "./storageHelper.js";
+import { pintGetUpdate, updateMultiple } from "./storageHelper.js";
 
 // may god have mercy if you are working with this spaghetti code.
 // can someone please help me find a way of implementing this better because

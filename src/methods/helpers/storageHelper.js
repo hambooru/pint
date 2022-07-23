@@ -27,8 +27,9 @@ export function pintSetNoReload(setting, value) {
  *  @param {string} setting - get this setting
  */
 export function pintGetUpdate(setting, func) {
-  chrome.storage.local.get([ `${setting}` ],
-                           function(result) { func(result[`${setting}`]); });
+  chrome.storage.local.get([`${setting}`], function (result) {
+    func(result[`${setting}`]);
+  });
 }
 
 /**

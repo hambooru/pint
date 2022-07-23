@@ -2,20 +2,21 @@
 import chroma from "chroma-js";
 
 import * as settings from "./config/colorGroups.js";
-import {updateOpacity} from "./helpers/opacityHelper.js";
-import {pintSetNoReload, updateMultiple} from "./helpers/storageHelper.js";
+import { updateOpacity } from "./helpers/opacityHelper.js";
+import { pintSetNoReload, updateMultiple } from "./helpers/storageHelper.js";
 import * as qs from "./quickScheme.js";
 
 // function to convert hex to rgb
 export function hexToRgb(hex) {
   var takenResult = hex;
   var result = takenResult.replace(/#/g, "").match(/.{1,2}/g);
-  return result ? {
-    r : parseInt(result[0], 16),
-    g : parseInt(result[1], 16),
-    b : parseInt(result[2], 16),
-  }
-                : null;
+  return result
+    ? {
+        r: parseInt(result[0], 16),
+        g: parseInt(result[1], 16),
+        b: parseInt(result[2], 16),
+      }
+    : null;
 }
 
 // function to convert rgb to hex
@@ -25,13 +26,15 @@ export function rgbToHex(r, g, b) {
 
 export function rgba2hex(orig) {
   var a,
-      rgb = orig.replace(/\s/g, "").match(
-          /^rgba?\((\d+),(\d+),(\d+),?([^,\s)]+)?/i),
-      alpha = ((rgb && rgb[4]) || "").trim(),
-      hex = rgb ? (rgb[1] | (1 << 8)).toString(16).slice(1) +
-                      (rgb[2] | (1 << 8)).toString(16).slice(1) +
-                      (rgb[3] | (1 << 8)).toString(16).slice(1)
-                : orig;
+    rgb = orig
+      .replace(/\s/g, "")
+      .match(/^rgba?\((\d+),(\d+),(\d+),?([^,\s)]+)?/i),
+    alpha = ((rgb && rgb[4]) || "").trim(),
+    hex = rgb
+      ? (rgb[1] | (1 << 8)).toString(16).slice(1) +
+        (rgb[2] | (1 << 8)).toString(16).slice(1) +
+        (rgb[3] | (1 << 8)).toString(16).slice(1)
+      : orig;
 
   if (alpha !== "") {
     a = alpha;
