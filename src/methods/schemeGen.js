@@ -1,10 +1,10 @@
 /*global chrome*/
 import chroma from "chroma-js";
 
-import { pintSetNoReload, updateMultiple } from "./helpers/storageHelper.js";
-import * as qs from "./quickScheme.js";
 import * as settings from "./config/colorGroups.js";
 import { updateOpacity } from "./helpers/opacityHelper.js";
+import { pintSetNoReload, updateMultiple } from "./helpers/storageHelper.js";
+import * as qs from "./quickScheme.js";
 
 // function to convert hex to rgb
 export function hexToRgb(hex) {

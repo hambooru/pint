@@ -1,12 +1,14 @@
 import chroma from "chroma-js";
-import { pintGetUpdate, updateMultiple } from "./storageHelper.js";
+
 import * as settings from "../config/colorGroups.js";
 
+import { pintGetUpdate, updateMultiple } from "./storageHelper.js";
+
 // may god have mercy if you are working with this spaghetti code.
-// can someone please help me find a way of implementing this better because this looks like shit.
-// it's like this because of the goddamn chrome extension limitation
-// PLEASE FILE AN ISSUE OR PR IF YOU HAVE A WAY TO MAKE THIS HANDLE BETTER BECAUSE GOD
-// I AM DYING LOOKING AND MAINTAINING THIS SPAGHETTI CODE
+// can someone please help me find a way of implementing this better because
+// this looks like shit. it's like this because of the goddamn chrome extension
+// limitation PLEASE FILE AN ISSUE OR PR IF YOU HAVE A WAY TO MAKE THIS HANDLE
+// BETTER BECAUSE GOD I AM DYING LOOKING AND MAINTAINING THIS SPAGHETTI CODE
 
 function setCG1(value) {
   updateMultiple(settings.cg1a_19, chroma(value).alpha(0.1).hex());
