@@ -2,7 +2,10 @@ import react from "react";
 import "../../assets/styles/App.css";
 import { IoIosBrush } from "react-icons/io";
 import CardTitle from "../global/CardTitle";
-import { pintSetNoReload, pintGetUpdate } from "../../methods/helper";
+import {
+  pintSetNoReload,
+  pintGetUpdate,
+} from "../../methods/helpers/storageHelper";
 
 var defaultValue = "#c0ffee";
 

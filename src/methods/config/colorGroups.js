@@ -1,7 +1,7 @@
 // Generated using cgGen
 
 // color group: 1 | default color: #00000000
-export var cg1_00000000 = [
+export var cg1_000000 = [
   "__color_action_list_item_default_active_border",
   "__color_action_list_item_default_hover_border",
   "__color_counter_border",

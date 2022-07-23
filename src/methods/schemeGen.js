@@ -1,8 +1,9 @@
 /*global chrome*/
 import chroma from "chroma-js";
 
-import * as settings from "./colorGroups.js";
-import { pintSetNoReload, updateMultiple } from "./helper.js";
+import * as settings from "./config/colorGroups.js";
+import { updateOpacity } from "./helpers/opacityHelper.js";
+import { pintSetNoReload, updateMultiple } from "./helpers/storageHelper.js";
 import * as qs from "./quickScheme.js";
 
 // function to convert hex to rgb
@@ -84,10 +85,10 @@ export function updateViaQuickScheme(color) {
 }
 
 export function bgGen(color) {
-  updateMultiple(settings.cg3_010409, chroma(color).darken().hex());
+  updateMultiple(settings.cg3_010409, chroma(color).darken(0.1).hex());
   updateMultiple(settings.cg8_0d1117, chroma(color).hex());
   updateMultiple(settings.cg13_161b22, chroma(color).brighten(0.3).hex());
-  updateMultiple(settings.cg18_238636, chroma(color).brighten(0.6).hex());
+  updateMultiple(settings.cg17_21262d, chroma(color).brighten(0.6).hex());
   updateMultiple(settings.cg22_30363d, chroma(color).brighten(0.9).hex());
   updateMultiple(settings.cg32_484f58, chroma(color).brighten(1.2).hex());
   updateMultiple(settings.cg46_6e7681, chroma(color).brighten(1.5).hex());
@@ -95,6 +96,8 @@ export function bgGen(color) {
   updateMultiple(settings.cg64_b1bac4, chroma(color).brighten(2.1).hex());
   updateMultiple(settings.cg71_c9d1d9, chroma(color).brighten(2.4).hex());
   updateMultiple(settings.cg84_f0f6fc, chroma(color).brighten(2.7).hex());
+  updateMultiple(settings.cg106_ffffff, chroma(color).brighten(3.0).hex());
+  updateOpacity();
   chrome.tabs.reload();
 }
 
