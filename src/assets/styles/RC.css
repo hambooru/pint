@@ -1,0 +1,32 @@
+/* Custom layout */
+.custom-layout .react-colorful {
+  padding: 2px;
+  border-radius: 12px;
+  background: #33333a !important;
+  box-shadow: 0 6px 12px #999;
+  width: inherit;
+  height: inherit;
+}
+
+.custom-layout .react-colorful__saturation {
+  border-radius: 5px;
+  border-bottom: none;
+  width: inherit;
+  height: inherit;
+  margin: 5px 0;
+}
+
+.custom-layout .react-colorful__hue {
+  order: -1;
+  height: 14px;
+  border-radius: 5px;
+}
+.custom-layout .react-colorful__alpha {
+  display: none;
+}
+
+.custom-layout .react-colorful__hue-pointer,
+.custom-layout .react-colorful__alpha-pointer {
+  width: 20px;
+  height: 20px;
+}
