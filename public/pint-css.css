@@ -471,7 +471,7 @@ svg {
   color: var(--color-scale-gray-0) !important;
 }
 
-input.form-control.input-sm.header-search-input.jump-to-field.js-jump-to-field.js-site-search-focus.js-site-search-field.is-clearable::placeholder {
+input.header-search-input::placeholder {
   color: var(--color-text-disabled) !important;
 }
 /* a,p {
