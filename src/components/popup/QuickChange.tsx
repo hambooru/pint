@@ -1,16 +1,14 @@
 import react from "react";
 import "../../assets/styles/App.css";
+import "../../assets/styles/RC.css";
 import { HexColorPicker, HexColorInput } from "react-colorful";
+import updateScale from "../../methods/helpers/scaleHelper";
+import * as updateManual from "../../methods/helpers/scaleHelper";
 import { TextField } from "@mui/material";
 import { IoIosBrush } from "react-icons/io";
 import CardTitle from "../global/CardTitle";
 import { pintGetUpdate } from "../../methods/helpers/storageHelper";
-import {
-  bgGen,
-  generateAccent,
-  updateText,
-  updateViaQuickScheme,
-} from "../../methods/schemeGen";
+import { updateOpacity } from "../../methods/helpers/opacityHelper";
 
 var defaultValue = "#c0ffee";
 
@@ -29,18 +27,19 @@ export default function QuickChange() {
   const [l4, setL4] = react.useState(`${defaultValue}`);
 
   function paintAccent() {
-    updateViaQuickScheme(color);
+    updateManual.updateAccent(color);
     setL4(color);
   }
 
   function paintBg() {
     setBgColor(color);
-    bgGen(color);
-    updateText(generateAccent(color, -130));
+    updateScale(color);
+    updateOpacity();
+    chrome.tabs.reload();
   }
 
   function paintText() {
-    updateText(color);
+    updateManual.text(color);
     setTextColor(color);
   }
 
@@ -56,7 +55,11 @@ export default function QuickChange() {
           />
         </div>
         <div className="flex justify-content p-1">
-          <HexColorPicker color={color} onChange={setColor} />
+          <HexColorPicker
+            className="custom-layout"
+            color={color}
+            onChange={setColor}
+          />
         </div>
       </div>
       <div className="flex-grow flex-col rounded-lg m-1 p-1 bg-white">

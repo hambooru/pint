@@ -8,7 +8,7 @@ import ChangeCard from "../components/options/ChangeCard";
 import react from "react";
 import { RgbaColorPicker } from "react-colorful";
 import CardTitle from "../components/global/CardTitle";
-import { rgba2hex } from "../methods/schemeGen";
+import chroma from "chroma-js";
 
 var settingsList = Object.keys(settings);
 
@@ -17,11 +17,12 @@ var stringifiedColor = `rgba(${defaultValue.r},${defaultValue.g},${defaultValue.
 
 export default function Options() {
   const [color, setColor] = react.useState(defaultValue);
-  const [hexColor, setHexColor] = react.useState();
+  const [hexColor, setHexColor] = react.useState(
+    chroma(stringifiedColor).hex()
+  );
 
   react.useLayoutEffect(() => {
-    stringifiedColor = `rgba(${color.r},${color.g},${color.b},${color.a})`;
-    setHexColor(rgba2hex(stringifiedColor));
+    setHexColor(chroma(stringifiedColor).hex());
   });
 
   return (
