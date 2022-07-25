@@ -1,4 +1,7 @@
+// HACK: manifest workaround
+/* eslint-disable no-undef */
 /*global chrome*/
+
 defaultColorScheme = {
   __color_accent_emphasis: "#1f6feb",
   __color_accent_fg: "#58a6ff",
@@ -460,7 +463,7 @@ initialSettings = Object.keys(defaultColorScheme);
 // defaultColorScheme object
 chrome.runtime.onInstalled.addListener(() => {
   initialSettings.forEach((initialSetting) => {
-    var key = {};
+    let key = {};
     key[`${initialSetting}`] = defaultColorScheme[initialSetting];
     chrome.storage.local.set(key);
     console.log(

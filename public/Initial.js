@@ -1,6 +1,7 @@
+// HACK: manifest workaround
+/* eslint-disable no-undef */
 /*global chrome*/
-key = "pintScheme";
-userScheme = {};
+
 defaultColorScheme = {
   __color_canvas_default_transparent: "rgba(13, 17, 23, 0)",
   __color_page_header_bg: "#0d1117",
@@ -459,10 +460,11 @@ colorSettings = Object.keys(defaultColorScheme);
 
 // function initialize() {
 console.log(`Pulling Data from Local Storage`);
+
 colorSettings.forEach((colorSetting) => {
   // replace all underscore with dash
-  var colorSettingVar = colorSetting.replace(/_/g, "-");
-  var colorSettingPersist = colorSetting;
+  let colorSettingVar = colorSetting.replace(/_/g, "-");
+  let colorSettingPersist = colorSetting;
   chrome.storage.local.get([`${colorSetting}`], function (result) {
     if (result[colorSetting] === undefined) {
       console.log(

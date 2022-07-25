@@ -1,0 +1,20 @@
+
+
+
+0 0 transparent => __color_btn_danger_hover_inset_shadow
+0 0 transparent => __color_btn_danger_hover_shadow
+0 0 transparent => __color_btn_danger_selected_shadow
+0 0 transparent => __color_btn_inset_shadow
+0 0 transparent => __color_btn_outline_selected_shadow
+0 0 transparent => __color_btn_primary_inset_shadow
+0 0 transparent => __color_btn_primary_selected_shadow
+0 0 transparent => __color_btn_primary_shadow
+0 0 transparent => __color_btn_shadow
+0 0 transparent => __color_primer_shadow_highlight
+0 0 transparent => __color_primer_shadow_inset
+0 0 transparent => __color_shadow_small
+
+1px => __color_checks_container_border_width
+1px => __color_checks_run_border_width
+
+screen => __color_diff_blob_selected_line_highlight_mix_blend_mode

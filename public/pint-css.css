@@ -471,9 +471,21 @@ svg {
   color: var(--color-scale-gray-0) !important;
 }
 
-input.form-control.input-sm.header-search-input.jump-to-field.js-jump-to-field.js-site-search-focus.js-site-search-field.is-clearable::placeholder {
+input.header-search-input::placeholder {
   color: var(--color-text-disabled) !important;
 }
+
+.achievement-badge-sidebar {
+  filter: drop-shadow(var(--color-scale-gray-9)) !important;
+}
+
+.dropdown-menu {
+  box-shadow: 0px 10px 30px var(--color-scale-gray-9) !important;
+  border-style: solid !important;
+  border-color: var(--color-scale-gray-9) !important;
+  border-radius: 10px !important;
+}
+
 /* a,p {
     color: var(--color-scale-gray-1) !important;
 }
