@@ -3283,6 +3283,11 @@ color-name@^1.1.4, color-name@~1.1.4:
   resolved "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
+color-scheme@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/color-scheme/-/color-scheme-1.0.1.tgz#d1de417f65e10f73c0eb2c97f7ed6c156bc6e8f5"
+  integrity sha512-4x+ya6+z6g9DaTFSfVzTZc8TSjxHuDT40NB43N3XPUkQlF6uujhwH8aeMeq8HBgoQQog/vrYgJ16mt/eVTRXwQ==
+
 colord@^2.9.1:
   version "2.9.2"
   resolved "https://registry.npmjs.org/colord/-/colord-2.9.2.tgz"
