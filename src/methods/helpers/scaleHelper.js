@@ -1,5 +1,3 @@
-import { updateMultiple } from "./storageHelper.js";
-import * as settings from "../config/colorGroups.js";
 import chroma from "chroma-js";
 import ColorScheme from "color-scheme";
 
