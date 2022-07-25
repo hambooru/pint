@@ -9,10 +9,10 @@ export var cg1_000000 = [
 ];
 
 // color group: 1 | default color: #00000019
-export var cg1a_19 = [ "__color_calendar_graph_day_bg" ];
+export var cg1a_19 = ["__color_calendar_graph_day_bg"];
 
 // color group: 2 | default color: #006d32
-export var cg2_006d32 = [ "__color_calendar_graph_day_L2_bg" ];
+export var cg2_006d32 = ["__color_calendar_graph_day_L2_bg"];
 
 // color group: 3 | default color: #010409
 export var cg3_010409 = [
@@ -23,10 +23,10 @@ export var cg3_010409 = [
 ];
 
 // color group: 3 | default color: #0104094c
-export var cg3a_4c = [ "__color_checks_dropdown_shadow" ];
+export var cg3a_4c = ["__color_checks_dropdown_shadow"];
 
 // color group: 3 | default color: #010409cc
-export var cg3a_cc = [ "__color_primer_canvas_backdrop" ];
+export var cg3a_cc = ["__color_primer_canvas_backdrop"];
 
 // color group: 4 | default color: #033a16
 export var cg4_033a16 = [
@@ -35,10 +35,10 @@ export var cg4_033a16 = [
 ];
 
 // color group: 5 | default color: #04260f
-export var cg5_04260f = [ "__color_scale_green_9" ];
+export var cg5_04260f = ["__color_scale_green_9"];
 
 // color group: 6 | default color: #051d4d
-export var cg6_051d4d = [ "__color_scale_blue_9" ];
+export var cg6_051d4d = ["__color_scale_blue_9"];
 
 // color group: 7 | default color: #0c2d6b
 export var cg7_0c2d6b = [
@@ -63,10 +63,10 @@ export var cg8_0d1117 = [
 ];
 
 // color group: 8 | default color: #0d111700
-export var cg8a_00 = [ "__color_canvas_default_transparent" ];
+export var cg8a_00 = ["__color_canvas_default_transparent"];
 
 // color group: 8 | default color: #0d1117f2
-export var cg8a_f2 = [ "__color_primer_canvas_sticky" ];
+export var cg8a_f2 = ["__color_primer_canvas_sticky"];
 
 // color group: 9 | default color: #0d419d
 export var cg9_0d419d = [
@@ -75,10 +75,10 @@ export var cg9_0d419d = [
 ];
 
 // color group: 10 | default color: #0e4429
-export var cg10_0e4429 = [ "__color_calendar_graph_day_L1_bg" ];
+export var cg10_0e4429 = ["__color_calendar_graph_day_L1_bg"];
 
 // color group: 11 | default color: #0f5323
-export var cg11_0f5323 = [ "__color_scale_green_7" ];
+export var cg11_0f5323 = ["__color_scale_green_7"];
 
 // color group: 12 | default color: #1158c7
 export var cg12_1158c7 = [
@@ -103,16 +103,16 @@ export var cg13_161b22 = [
 ];
 
 // color group: 13 | default color: #161b2200
-export var cg13a_00 = [ "__color_project_gradient_out" ];
+export var cg13a_00 = ["__color_project_gradient_out"];
 
 // color group: 14 | default color: #196c2e
-export var cg14_196c2e = [ "__color_scale_green_6" ];
+export var cg14_196c2e = ["__color_scale_green_6"];
 
 // color group: 15 | default color: #1b1f230a
-export var cg15_1b1f230a = [ "__color_workflow_card_header_shadow" ];
+export var cg15_1b1f230a = ["__color_workflow_card_header_shadow"];
 
 // color group: 15 | default color: #1b1f230f
-export var cg15a_0f = [ "__color_calendar_graph_day_border" ];
+export var cg15a_0f = ["__color_calendar_graph_day_border"];
 
 // color group: 16 | default color: #1f6feb
 export var cg16_1f6feb = [
@@ -124,19 +124,19 @@ export var cg16_1f6feb = [
 ];
 
 // color group: 16 | default color: #1f6feb0c
-export var cg16a_0c = [ "__color_btn_outline_disabled_counter_bg" ];
+export var cg16a_0c = ["__color_btn_outline_disabled_counter_bg"];
 
 // color group: 16 | default color: #1f6feb19
-export var cg16a_19 = [ "__color_btn_outline_counter_bg" ];
+export var cg16a_19 = ["__color_btn_outline_counter_bg"];
 
 // color group: 16 | default color: #1f6feb59
-export var cg16a_59 = [ "__color_switch_track_checked_bg" ];
+export var cg16a_59 = ["__color_switch_track_checked_bg"];
 
 // color group: 16 | default color: #1f6feb7f
-export var cg16a_7f = [ "__color_switch_track_checked_hover_bg" ];
+export var cg16a_7f = ["__color_switch_track_checked_hover_bg"];
 
 // color group: 16 | default color: #1f6feba5
-export var cg16a_a5 = [ "__color_switch_track_checked_active_bg" ];
+export var cg16a_a5 = ["__color_switch_track_checked_active_bg"];
 
 // color group: 17 | default color: #21262d
 export var cg17_21262d = [
@@ -161,13 +161,13 @@ export var cg18_238636 = [
 ];
 
 // color group: 18 | default color: #23863699
-export var cg18a_99 = [ "__color_btn_primary_disabled_bg" ];
+export var cg18a_99 = ["__color_btn_primary_disabled_bg"];
 
 // color group: 19 | default color: #26a641
-export var cg19_26a641 = [ "__color_calendar_graph_day_L3_bg" ];
+export var cg19_26a641 = ["__color_calendar_graph_day_L3_bg"];
 
 // color group: 20 | default color: #271052
-export var cg20_271052 = [ "__color_scale_purple_9" ];
+export var cg20_271052 = ["__color_scale_purple_9"];
 
 // color group: 21 | default color: #2ea043
 export var cg21_2ea043 = [
@@ -203,16 +203,16 @@ export var cg22_30363d = [
 ];
 
 // color group: 22 | default color: #30363d7a
-export var cg22a_7a = [ "__color_action_list_item_inline_divider" ];
+export var cg22a_7a = ["__color_action_list_item_inline_divider"];
 
 // color group: 22 | default color: #30363d80
-export var cg22a_80 = [ "__color_select_menu_tap_highlight" ];
+export var cg22a_80 = ["__color_select_menu_tap_highlight"];
 
 // color group: 23 | default color: #341a00
-export var cg23_341a00 = [ "__color_scale_yellow_9" ];
+export var cg23_341a00 = ["__color_scale_yellow_9"];
 
 // color group: 24 | default color: #388bfd
-export var cg24_388bfd = [ "__color_scale_blue_4" ];
+export var cg24_388bfd = ["__color_scale_blue_4"];
 
 // color group: 24 | default color: #388bfd26
 export var cg24a_26 = [
@@ -228,16 +228,16 @@ export var cg24a_66 = [
 ];
 
 // color group: 25 | default color: #39c5cf
-export var cg25_39c5cf = [ "__color_ans_Icyan" ];
+export var cg25_39c5cf = ["__color_ans_Icyan"];
 
 // color group: 26 | default color: #39d353
-export var cg26_39d353 = [ "__color_calendar_graph_day_L4_bg" ];
+export var cg26_39d353 = ["__color_calendar_graph_day_L4_bg"];
 
 // color group: 27 | default color: #3c1e70
-export var cg27_3c1e70 = [ "__color_scale_purple_8" ];
+export var cg27_3c1e70 = ["__color_scale_purple_8"];
 
 // color group: 28 | default color: #3d1300
-export var cg28_3d1300 = [ "__color_scale_orange_9" ];
+export var cg28_3d1300 = ["__color_scale_orange_9"];
 
 // color group: 29 | default color: #3fb950
 export var cg29_3fb950 = [
@@ -251,13 +251,13 @@ export var cg29_3fb950 = [
 ];
 
 // color group: 29 | default color: #3fb9504d
-export var cg29a_4d = [ "__color_diff_blob_addition_num_bg" ];
+export var cg29a_4d = ["__color_diff_blob_addition_num_bg"];
 
 // color group: 30 | default color: #42062a
-export var cg30_42062a = [ "__color_scale_pink_9" ];
+export var cg30_42062a = ["__color_scale_pink_9"];
 
 // color group: 31 | default color: #460701
-export var cg31_460701 = [ "__color_scale_coral_9" ];
+export var cg31_460701 = ["__color_scale_coral_9"];
 
 // color group: 32 | default color: #484f58
 export var cg32_484f58 = [
@@ -270,13 +270,13 @@ export var cg32_484f58 = [
 ];
 
 // color group: 33 | default color: #490202
-export var cg33_490202 = [ "__color_scale_red_9" ];
+export var cg33_490202 = ["__color_scale_red_9"];
 
 // color group: 34 | default color: #4b2900
-export var cg34_4b2900 = [ "__color_scale_yellow_8" ];
+export var cg34_4b2900 = ["__color_scale_yellow_8"];
 
 // color group: 35 | default color: #553098
-export var cg35_553098 = [ "__color_scale_purple_7" ];
+export var cg35_553098 = ["__color_scale_purple_7"];
 
 // color group: 36 | default color: #56d364
 export var cg36_56d364 = [
@@ -286,7 +286,7 @@ export var cg36_56d364 = [
 ];
 
 // color group: 37 | default color: #56d4dd
-export var cg37_56d4dd = [ "__color_ans_Icyan_bright" ];
+export var cg37_56d4dd = ["__color_ans_Icyan_bright"];
 
 // color group: 38 | default color: #58a6ff
 export var cg38_58a6ff = [
@@ -303,7 +303,7 @@ export var cg38_58a6ff = [
 ];
 
 // color group: 38 | default color: #58a6ff80
-export var cg38a_80 = [ "__color_btn_outline_disabled_text" ];
+export var cg38a_80 = ["__color_btn_outline_disabled_text"];
 
 // color group: 39 | default color: #5a1e02
 export var cg39_5a1e02 = [
@@ -312,13 +312,13 @@ export var cg39_5a1e02 = [
 ];
 
 // color group: 40 | default color: #5e103e
-export var cg40_5e103e = [ "__color_scale_pink_8" ];
+export var cg40_5e103e = ["__color_scale_pink_8"];
 
 // color group: 41 | default color: #631c03
-export var cg41_631c03 = [ "__color_calendar_halloween_graph_day_L1_bg" ];
+export var cg41_631c03 = ["__color_calendar_halloween_graph_day_L1_bg"];
 
 // color group: 42 | default color: #640D04
-export var cg42_640D04 = [ "__color_scale_coral_8" ];
+export var cg42_640D04 = ["__color_scale_coral_8"];
 
 // color group: 43 | default color: #67060c
 export var cg43_67060c = [
@@ -327,10 +327,10 @@ export var cg43_67060c = [
 ];
 
 // color group: 44 | default color: #693e00
-export var cg44_693e00 = [ "__color_scale_yellow_7" ];
+export var cg44_693e00 = ["__color_scale_yellow_7"];
 
 // color group: 45 | default color: #6e40c9
-export var cg45_6e40c9 = [ "__color_scale_purple_6" ];
+export var cg45_6e40c9 = ["__color_scale_purple_6"];
 
 // color group: 46 | default color: #6e7681
 export var cg46_6e7681 = [
@@ -354,7 +354,7 @@ export var cg46_6e7681 = [
 ];
 
 // color group: 46 | default color: #6e768100
-export var cg46a_00 = [ "__color_input_disabled_bg" ];
+export var cg46a_00 = ["__color_input_disabled_bg"];
 
 // color group: 46 | default color: #6e768119
 export var cg46a_19 = [
@@ -374,10 +374,10 @@ export var cg46a_66 = [
 ];
 
 // color group: 47 | default color: #762d0a
-export var cg47_762d0a = [ "__color_scale_orange_7" ];
+export var cg47_762d0a = ["__color_scale_orange_7"];
 
 // color group: 48 | default color: #76e3ea
-export var cg48_76e3ea = [ "__color_checks_ans_Icyan" ];
+export var cg48_76e3ea = ["__color_checks_ans_Icyan"];
 
 // color group: 49 | default color: #79c0ff
 export var cg49_79c0ff = [
@@ -391,7 +391,7 @@ export var cg49_79c0ff = [
 ];
 
 // color group: 50 | default color: #7d2457
-export var cg50_7d2457 = [ "__color_scale_pink_7" ];
+export var cg50_7d2457 = ["__color_scale_pink_7"];
 
 // color group: 51 | default color: #7ee787
 export var cg51_7ee787 = [
@@ -401,13 +401,13 @@ export var cg51_7ee787 = [
 ];
 
 // color group: 52 | default color: #845306
-export var cg52_845306 = [ "__color_scale_yellow_6" ];
+export var cg52_845306 = ["__color_scale_yellow_6"];
 
 // color group: 53 | default color: #872012
-export var cg53_872012 = [ "__color_scale_coral_7" ];
+export var cg53_872012 = ["__color_scale_coral_7"];
 
 // color group: 54 | default color: #8957e5
-export var cg54_8957e5 = [ "__color_done_emphasis", "__color_scale_purple_5" ];
+export var cg54_8957e5 = ["__color_done_emphasis", "__color_scale_purple_5"];
 
 // color group: 55 | default color: #8b949e
 export var cg55_8b949e = [
@@ -441,10 +441,10 @@ export var cg56_8e1519 = [
 ];
 
 // color group: 57 | default color: #9b4215
-export var cg57_9b4215 = [ "__color_scale_orange_6" ];
+export var cg57_9b4215 = ["__color_scale_orange_6"];
 
 // color group: 58 | default color: #9e3670
-export var cg58_9e3670 = [ "__color_scale_pink_6" ];
+export var cg58_9e3670 = ["__color_scale_pink_6"];
 
 // color group: 59 | default color: #9e6a03
 export var cg59_9e6a03 = [
@@ -461,10 +461,10 @@ export var cg60_a371f7 = [
 ];
 
 // color group: 60 | default color: #a371f726
-export var cg60a_26 = [ "__color_done_subtle" ];
+export var cg60a_26 = ["__color_done_subtle"];
 
 // color group: 60 | default color: #a371f766
-export var cg60a_66 = [ "__color_done_muted" ];
+export var cg60a_66 = ["__color_done_muted"];
 
 // color group: 61 | default color: #a5d6ff
 export var cg61_a5d6ff = [
@@ -475,7 +475,7 @@ export var cg61_a5d6ff = [
 ];
 
 // color group: 62 | default color: #AC3220
-export var cg62_AC3220 = [ "__color_scale_coral_6" ];
+export var cg62_AC3220 = ["__color_scale_coral_6"];
 
 // color group: 63 | default color: #aff5b4
 export var cg63_aff5b4 = [
@@ -492,16 +492,16 @@ export var cg64_b1bac4 = [
 ];
 
 // color group: 64 | default color: #b1bac414
-export var cg64a_14 = [ "__color_action_list_item_default_selected_bg" ];
+export var cg64a_14 = ["__color_action_list_item_default_selected_bg"];
 
 // color group: 64 | default color: #b1bac41e
-export var cg64a_1e = [ "__color_action_list_item_default_hover_bg" ];
+export var cg64a_1e = ["__color_action_list_item_default_hover_bg"];
 
 // color group: 64 | default color: #b1bac433
-export var cg64a_33 = [ "__color_action_list_item_default_active_bg" ];
+export var cg64a_33 = ["__color_action_list_item_default_active_bg"];
 
 // color group: 65 | default color: #b3f0ff
-export var cg65_b3f0ff = [ "__color_checks_ans_Icyan_bright" ];
+export var cg65_b3f0ff = ["__color_checks_ans_Icyan_bright"];
 
 // color group: 66 | default color: #b62324
 export var cg66_b62324 = [
@@ -511,7 +511,7 @@ export var cg66_b62324 = [
 ];
 
 // color group: 67 | default color: #bb8009
-export var cg67_bb8009 = [ "__color_scale_yellow_4" ];
+export var cg67_bb8009 = ["__color_scale_yellow_4"];
 
 // color group: 67 | default color: #bb800926
 export var cg67a_26 = [
@@ -521,7 +521,7 @@ export var cg67a_26 = [
 ];
 
 // color group: 67 | default color: #bb800966
-export var cg67a_66 = [ "__color_attention_muted" ];
+export var cg67a_66 = ["__color_attention_muted"];
 
 // color group: 68 | default color: #bc8cff
 export var cg68_bc8cff = [
@@ -538,8 +538,7 @@ export var cg69_bd561d = [
 ];
 
 // color group: 70 | default color: #bf4b8a
-export var cg70_bf4b8a =
-    [ "__color_scale_pink_5", "__color_sponsors_emphasis" ];
+export var cg70_bf4b8a = ["__color_scale_pink_5", "__color_sponsors_emphasis"];
 
 // color group: 71 | default color: #c9d1d9
 export var cg71_c9d1d9 = [
@@ -567,10 +566,10 @@ export var cg71_c9d1d9 = [
 ];
 
 // color group: 72 | default color: #cae8ff
-export var cg72_cae8ff = [ "__color_scale_blue_0" ];
+export var cg72_cae8ff = ["__color_scale_blue_0"];
 
 // color group: 73 | default color: #CF462D
-export var cg73_CF462D = [ "__color_scale_coral_5" ];
+export var cg73_CF462D = ["__color_scale_coral_5"];
 
 // color group: 74 | default color: #d29922
 export var cg74_d29922 = [
@@ -585,7 +584,7 @@ export var cg74_d29922 = [
 ];
 
 // color group: 74 | default color: #d2992266
-export var cg74a_66 = [ "__color_search_keyword_hl" ];
+export var cg74a_66 = ["__color_search_keyword_hl"];
 
 // color group: 75 | default color: #d2a8ff
 export var cg75_d2a8ff = [
@@ -606,31 +605,31 @@ export var cg76_da3633 = [
 ];
 
 // color group: 76 | default color: #da36330c
-export var cg76a_0c = [ "__color_btn_danger_disabled_counter_bg" ];
+export var cg76a_0c = ["__color_btn_danger_disabled_counter_bg"];
 
 // color group: 76 | default color: #da363319
-export var cg76a_19 = [ "__color_btn_danger_counter_bg" ];
+export var cg76a_19 = ["__color_btn_danger_counter_bg"];
 
 // color group: 77 | default color: #db61a2
-export var cg77_db61a2 = [ "__color_scale_pink_4", "__color_sponsors_fg" ];
+export var cg77_db61a2 = ["__color_scale_pink_4", "__color_sponsors_fg"];
 
 // color group: 77 | default color: #db61a226
-export var cg77a_26 = [ "__color_sponsors_subtle" ];
+export var cg77a_26 = ["__color_sponsors_subtle"];
 
 // color group: 77 | default color: #db61a266
-export var cg77a_66 = [ "__color_sponsors_muted" ];
+export var cg77a_66 = ["__color_sponsors_muted"];
 
 // color group: 78 | default color: #db6d28
-export var cg78_db6d28 = [ "__color_scale_orange_4", "__color_severe_fg" ];
+export var cg78_db6d28 = ["__color_scale_orange_4", "__color_severe_fg"];
 
 // color group: 78 | default color: #db6d2826
-export var cg78a_26 = [ "__color_severe_subtle" ];
+export var cg78a_26 = ["__color_severe_subtle"];
 
 // color group: 78 | default color: #db6d2866
-export var cg78a_66 = [ "__color_severe_muted" ];
+export var cg78a_66 = ["__color_severe_muted"];
 
 // color group: 79 | default color: #e2c5ff
-export var cg79_e2c5ff = [ "__color_scale_purple_1" ];
+export var cg79_e2c5ff = ["__color_scale_purple_1"];
 
 // color group: 80 | default color: #e3b341
 export var cg80_e3b341 = [
@@ -640,13 +639,13 @@ export var cg80_e3b341 = [
 ];
 
 // color group: 81 | default color: #EA6045
-export var cg81_EA6045 = [ "__color_scale_coral_4" ];
+export var cg81_EA6045 = ["__color_scale_coral_4"];
 
 // color group: 82 | default color: #eddeff
-export var cg82_eddeff = [ "__color_scale_purple_0" ];
+export var cg82_eddeff = ["__color_scale_purple_0"];
 
 // color group: 83 | default color: #f0883e
-export var cg83_f0883e = [ "__color_scale_orange_3" ];
+export var cg83_f0883e = ["__color_scale_orange_3"];
 
 // color group: 84 | default color: #f0f6fc
 export var cg84_f0f6fc = [
@@ -679,10 +678,10 @@ export var cg85_f2cc60 = [
 ];
 
 // color group: 86 | default color: #f6f8fa
-export var cg86_f6f8fa = [ "__color_mktg_btn_bg" ];
+export var cg86_f6f8fa = ["__color_mktg_btn_bg"];
 
 // color group: 87 | default color: #f778ba
-export var cg87_f778ba = [ "__color_scale_pink_3" ];
+export var cg87_f778ba = ["__color_scale_pink_3"];
 
 // color group: 88 | default color: #F78166
 export var cg88_F78166 = [
@@ -713,13 +712,13 @@ export var cg89a_26 = [
 ];
 
 // color group: 89 | default color: #f8514928
-export var cg89a_28 = [ "__color_action_list_item_danger_hover_bg" ];
+export var cg89a_28 = ["__color_action_list_item_danger_hover_bg"];
 
 // color group: 89 | default color: #f851493d
-export var cg89a_3d = [ "__color_action_list_item_danger_active_bg" ];
+export var cg89a_3d = ["__color_action_list_item_danger_active_bg"];
 
 // color group: 89 | default color: #f851494c
-export var cg89a_4c = [ "__color_diff_blob_deletion_num_bg" ];
+export var cg89a_4c = ["__color_diff_blob_deletion_num_bg"];
 
 // color group: 89 | default color: #f8514966
 export var cg89a_66 = [
@@ -729,16 +728,16 @@ export var cg89a_66 = [
 ];
 
 // color group: 89 | default color: #f851497f
-export var cg89a_7f = [ "__color_btn_danger_disabled_text" ];
+export var cg89a_7f = ["__color_btn_danger_disabled_text"];
 
 // color group: 90 | default color: #f8e3a1
-export var cg90_f8e3a1 = [ "__color_scale_yellow_0" ];
+export var cg90_f8e3a1 = ["__color_scale_yellow_0"];
 
 // color group: 91 | default color: #fa7a18
-export var cg91_fa7a18 = [ "__color_calendar_halloween_graph_day_L3_bg" ];
+export var cg91_fa7a18 = ["__color_calendar_halloween_graph_day_L3_bg"];
 
 // color group: 92 | default color: #fddf68
-export var cg92_fddf68 = [ "__color_calendar_halloween_graph_day_L4_bg" ];
+export var cg92_fddf68 = ["__color_calendar_halloween_graph_day_L4_bg"];
 
 // color group: 93 | default color: #ff7b72
 export var cg93_ff7b72 = [
@@ -753,7 +752,7 @@ export var cg93_ff7b72 = [
 ];
 
 // color group: 94 | default color: #ff9bce
-export var cg94_ff9bce = [ "__color_scale_pink_2" ];
+export var cg94_ff9bce = ["__color_scale_pink_2"];
 
 // color group: 95 | default color: #ffa198
 export var cg95_ffa198 = [
@@ -763,7 +762,7 @@ export var cg95_ffa198 = [
 ];
 
 // color group: 96 | default color: #FFA28B
-export var cg96_FFA28B = [ "__color_scale_coral_2" ];
+export var cg96_FFA28B = ["__color_scale_coral_2"];
 
 // color group: 97 | default color: #ffa657
 export var cg97_ffa657 = [
@@ -773,19 +772,19 @@ export var cg97_ffa657 = [
 ];
 
 // color group: 98 | default color: #ffbedd
-export var cg98_ffbedd = [ "__color_scale_pink_1" ];
+export var cg98_ffbedd = ["__color_scale_pink_1"];
 
 // color group: 99 | default color: #ffc1ba
-export var cg99_ffc1ba = [ "__color_scale_red_1" ];
+export var cg99_ffc1ba = ["__color_scale_red_1"];
 
 // color group: 100 | default color: #FFC2B2
-export var cg100_FFC2B2 = [ "__color_scale_coral_1" ];
+export var cg100_FFC2B2 = ["__color_scale_coral_1"];
 
 // color group: 101 | default color: #ffc680
-export var cg101_ffc680 = [ "__color_scale_orange_1" ];
+export var cg101_ffc680 = ["__color_scale_orange_1"];
 
 // color group: 102 | default color: #ffdaec
-export var cg102_ffdaec = [ "__color_scale_pink_0" ];
+export var cg102_ffdaec = ["__color_scale_pink_0"];
 
 // color group: 103 | default color: #ffdcd7
 export var cg103_ffdcd7 = [
@@ -794,7 +793,7 @@ export var cg103_ffdcd7 = [
 ];
 
 // color group: 104 | default color: #FFDDD2
-export var cg104_FFDDD2 = [ "__color_scale_coral_0" ];
+export var cg104_FFDDD2 = ["__color_scale_coral_0"];
 
 // color group: 105 | default color: #ffdfb6
 export var cg105_ffdfb6 = [
@@ -825,7 +824,7 @@ export var cg106a_0c = [
 ];
 
 // color group: 106 | default color: #ffffff19
-export var cg106a_19 = [ "__color_avatar_bg" ];
+export var cg106a_19 = ["__color_avatar_bg"];
 
 // color group: 106 | default color: #ffffff33
 export var cg106a_33 = [
@@ -836,10 +835,10 @@ export var cg106a_33 = [
 ];
 
 // color group: 106 | default color: #ffffff7f
-export var cg106a_7f = [ "__color_btn_primary_disabled_text" ];
+export var cg106a_7f = ["__color_btn_primary_disabled_text"];
 
 // color group: 106 | default color: #ffffffb2
-export var cg106a_b2 = [ "__color_header_text" ];
+export var cg106a_b2 = ["__color_header_text"];
 
 export var cgshadows = [
   "__color_mktg_btn_shadow_hover_muted",
