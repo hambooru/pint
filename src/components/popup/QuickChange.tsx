@@ -3,7 +3,7 @@ import "../../assets/styles/App.css";
 import "../../assets/styles/RC.css";
 import { HexColorPicker, HexColorInput } from "react-colorful";
 import updateScale from "../../methods/helpers/scaleHelper";
-import * as updateManual from "../../methods/helpers/scaleHelper";
+import * as scaleHelper from "../../methods/helpers/scaleHelper";
 import { TextField } from "@mui/material";
 import { IoIosBrush } from "react-icons/io";
 import CardTitle from "../global/CardTitle";
@@ -27,7 +27,7 @@ export default function QuickChange() {
   const [l4, setL4] = react.useState(`${defaultValue}`);
 
   function paintAccent() {
-    updateManual.updateAccent(color);
+    scaleHelper.updateAccent(color);
     setL4(color);
   }
 
@@ -39,7 +39,7 @@ export default function QuickChange() {
   }
 
   function paintText() {
-    updateManual.text(color);
+    scaleHelper.updateText(color);
     setTextColor(color);
   }
 

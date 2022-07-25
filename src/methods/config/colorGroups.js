@@ -839,3 +839,25 @@ export var cg106a_7f = ["__color_btn_primary_disabled_text"];
 
 // color group: 106 | default color: #ffffffb2
 export var cg106a_b2 = ["__color_header_text"];
+
+export var cgshadows = [
+  "__color_mktg_btn_shadow_hover_muted",
+  "__color_mktg_btn_shadow_focus",
+  "__color_btn_shadow_input_focus",
+  "__color_overlay_shadow",
+  "__color_checks_input_shadow",
+  "__color_primer_shadow_focus",
+  "__color_btn_focus_shadow",
+  "__color_btn_outline_focus_shadow",
+  "__color_btn_danger_focus_shadow",
+  "__color_btn_primary_focus_shadow",
+  "__color_shadow_extra_large",
+  "__color_btn_outline_hover_shadow",
+  "__color_shadow_medium",
+  "__color_mktg_btn_shadow_hover",
+  "__color_shadow_large",
+  "__color_avatar_child_shadow",
+  "__color_btn_active_bg",
+  "__color_btn_shadow_active",
+  "__color_btn_outline_hover_inset_shadow",
+];
