@@ -1,6 +1,10 @@
 import chroma from "chroma-js";
 import ColorScheme from "color-scheme";
 
+import * as settings from "../config/colorGroups.js";
+
+import { updateMultiple } from "./storageHelper.js";
+
 // ----------- ASSIGNABLES -----------
 let orange = [
   settings.cg28_3d1300,
