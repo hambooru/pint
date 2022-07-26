@@ -4,6 +4,7 @@ interface Props {
   name: string;
   color?: string;
   textcolor?: string | "#ffffff";
+  className?: string;
 }
 
 export default function CardTitle(props: Props) {
