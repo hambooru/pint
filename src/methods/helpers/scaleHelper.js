@@ -3,7 +3,7 @@ import ColorScheme from "color-scheme";
 
 import * as settings from "../config/colorGroups.js";
 
-import { updateMultiple } from "./storageHelper.js";
+import {updateMultiple} from "./storageHelper.js";
 
 // ----------- ASSIGNABLES -----------
 export let orange = [
@@ -167,14 +167,11 @@ export function updateCalendar(color, saturate, scale) {
   }
 
   for (let i = 0; i < scale.length; i++) {
-    updateMultiple(
-      scale[i],
-      chroma(color)
-        .brighten(3)
-        .saturate(saturate)
-        .alpha((i + 1) * 0.2)
-        .hex()
-    );
+    updateMultiple(scale[i], chroma(color)
+                                 .brighten(3)
+                                 .saturate(saturate)
+                                 .alpha((i + 1) * 0.2)
+                                 .hex());
   }
 }
 
@@ -197,22 +194,16 @@ export function updateSpecific(color, desaturate, saturate, scale) {
 
   for (let i = 0; i < scale.length; i++) {
     /^\d/.test(color.slice(-4))
-      ? updateMultiple(
-          scale[i],
-          chroma(color)
-            .brighten(i * 0.4)
-            .saturate(saturate)
-            .desaturate(desaturate)
-            .hex()
-        )
-      : updateMultiple(
-          scale[i],
-          chroma(color)
-            .darken(i * 0.4)
-            .saturate(saturate)
-            .desaturate(desaturate)
-            .hex()
-        );
+        ? updateMultiple(scale[i], chroma(color)
+                                       .brighten(i * 0.4)
+                                       .saturate(saturate)
+                                       .desaturate(desaturate)
+                                       .hex())
+        : updateMultiple(scale[i], chroma(color)
+                                       .darken(i * 0.4)
+                                       .saturate(saturate)
+                                       .desaturate(desaturate)
+                                       .hex());
   }
 }
 
@@ -226,10 +217,10 @@ export function updateAccent(color) {
 export function generateScheme(color, scheme, variation, distance) {
   let s = new ColorScheme();
   s.from_hex(chroma(color).hex().slice(-6))
-    .scheme(scheme)
-    .variation(variation)
-    .add_complement(true)
-    .distance(distance);
+      .scheme(scheme)
+      .variation(variation)
+      .add_complement(true)
+      .distance(distance);
 
   return s.colors();
 }
@@ -238,15 +229,7 @@ export function generateSaturation(color, setting) {
   let colors = [];
   for (let i = 0; i < 10; i++) {
     /^\d/.test(color.slice(-4))
-      ? colors.push(
-          chroma(color)
-            .darken(i * 0.4)
-            .hex()
-        )
-      : colors.push(
-          chroma(color)
-            .brighten(i * 0.4)
-            .hex()
-        );
+        ? colors.push(chroma(color).darken(i * 0.4).hex())
+        : colors.push(chroma(color).brighten(i * 0.4).hex());
   }
 }
