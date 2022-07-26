@@ -1,7 +1,6 @@
 import React from "react";
 import "../assets/styles/App.css";
 import Header from "../components/options/Header";
-import QuickSettings from "../components/popup/QuickSettings";
 import "../methods/config/settings.js";
 import { settings } from "../methods/config/settings";
 import ChangeCard from "../components/options/ChangeCard";
@@ -31,7 +30,6 @@ export default function Options() {
         <div className=" w-[300px]"></div>
         <div className=" fixed w-[300px]">
           <Header />
-          <QuickSettings />
           <div className="flex flex-col rounded-lg mt-2 mx-3 p-1 bg-white">
             <div className=" bg-whiteflex-start align-left text-l p-1">
               <p>hex-rgba converter</p>

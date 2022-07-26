@@ -1,8 +1,16 @@
 import logo from "../../assets/images/pint.svg";
 import "../../assets/styles/App.css";
 import { IoMdSettings } from "react-icons/io";
-import { AiFillGithub } from "react-icons/ai";
-
+import {
+  AiFillGithub,
+  AiFillCloseCircle,
+  AiFillClockCircle,
+  AiFillCheckCircle,
+  AiFillCiCircle,
+  AiFillHeart,
+} from "react-icons/ai";
+import { BsFillCalendar3WeekFill, BsMenuButtonWideFill } from "react-icons/bs";
+import { MdTextSnippet, MdFormatColorText } from "react-icons/md";
 export default function Header() {
   function openOptions() {
     chrome.runtime.openOptionsPage();
@@ -14,13 +22,16 @@ export default function Header() {
       selected: true,
     });
   }
+
   return (
-    <div className="flex flex-row rounded-lg mb-1 m-2 mx-3 p-1  justify-between items-center">
+    <div className="flex flex-row mb-2 px-4 p-1 justify-between items-center bg-[#161b22] h-[64px]">
       <div className="flex flex-row">
-        <img src={logo} className="flex-none w-12" alt="logo" />
-        <div className="flex-col p-1 text-white">
-          <p className="flex-1 self-center text-xl"> pint for github </p>
-          <p className="flex-1 self-center text-l">2.0-dev - simple mode</p>
+        <img src={logo} className="flex-none w-10" alt="logo" />
+        <div className="flex-col p-1 text-white align-middle ml-2 ">
+          <p className="flex-1 text-left text-md mt-1"> pint for github</p>
+          <p className="flex-1 text-left text-md mb-1 text-gray-400">
+            sign in to broadcast your palette
+          </p>
         </div>
       </div>
       <div>

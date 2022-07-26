@@ -9,17 +9,17 @@
 }
 
 .custom-layout .react-colorful__saturation {
-  border-radius: 5px;
+  border-radius: 0px;
   border-bottom: none;
   width: inherit;
   height: inherit;
-  margin: 5px 0;
+  margin: 0;
 }
 
 .custom-layout .react-colorful__hue {
   order: -1;
   height: 14px;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 .custom-layout .react-colorful__alpha {
   display: none;
