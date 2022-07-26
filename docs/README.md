@@ -12,7 +12,7 @@
 
 [pint](https://projects.fuwa.sh/pint/) is a theming engine that allows you to rice your github experience.
 
-![pintpreview](https://go.fuwa.sh/u/ufuvwg.png)
+![image](https://user-images.githubusercontent.com/53419401/180970561-02cc824d-f4e5-4935-97f0-560d3860b05a.png)
 <br>
 <br>
 
