@@ -8,7 +8,7 @@
 
 <hr>
 
-###### Traveller Information: You are on the main dev't branch. Things break here. For latest stable check branch v1.
+> 💡 You are currently looking at the rebranded version of pint which is currently unreleased, the released one is located [here](https://github.com/fuwaa/pint/tree/v1)
 
 [pint](https://projects.fuwa.sh/pint/) is a theming engine that allows you to rice your github experience.
 
@@ -21,8 +21,7 @@
 you can install this extension via the chrome web store (old version) or manually.
 
 ### chrome web store installation
-
-please note that the version in the chrome web store is V1, which is very bad and outdated.
+> ⚠️ Please note that the version in the chrome web store is V1, which is very bad and outdated.
 
 <a href="https://chrome.google.com/webstore/detail/gitccentify/mjhmdkcefcklflcmmokoahfdodcpeobg"><img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png" /></a>
 
@@ -37,7 +36,15 @@ please note that the version in the chrome web store is V1, which is very bad an
 
 ## roadmap
 
-please check #12.
+please check issue [#12](https://github.com/fuwaa/pint/issues/12) for more information :)
+
+## limitations
+> 💡 I am still looking for ways to better implement this! if you have any idea, please open an issue or create a pull request [here](https://github.com/fuwaa/pint/issues/new/choose)
+
+The old implementation used a `setTimeout()` function, however the delay makes the project look like garbage as you can see the original colors before seeing your palette applied. The new implementation simply throws the entire css of github and unsets it while hiding the entire html making github look like an empty page until your palette gets loaded. Slight issue though, a flicker comes from time to time but it isn't noticable.
+
+## documentation
+Documentation is planned to debut on [fuwadocs](https://docs.fuwa.sh/pint/), however it is still in progress and is quite low on the priority queue.
 
 ## contributing
 
