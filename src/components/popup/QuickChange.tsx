@@ -134,18 +134,46 @@ export default function QuickChange() {
     <div>
       <div className="flex flex-col rounded-lg mt-4 mx-3">
         <div className="flex-1 flex-col rounded-[6px] bg-[#06193a] border-solid border-[#163e6d] border-2 ">
-          <div className="flex flex-row justify-content text-left text-white justify-left items-center  mt-2 ml-2">
+          <div className="flex flex-row justify-content text-left text-white justify-left items-center  mt-2 ml-2 mb-1">
             <FcIdea className="mx-1" />
             <p className="text-semibold">
               Need ideas? These colors compliment your current pick!
+            </p>
+          </div>
+          <div className="flex flex-row justify-content text-left text-[#3080af] justify-left items-center  mt-2 ml-3 mb-1">
+            <p className="text-semibold">
+              Scheme Variations
+            </p>
+          </div>
+          <div className="flex flex-row justify-content p-1 ml-2">
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> triade </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> tetrade </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> analogic </button>
+          </div>
+          <div className="flex flex-row justify-content text-left text-[#3080af] justify-left items-center  mt-2 ml-3 mb-1">
+            <p className="text-semibold">
+              Color Variations
+            </p>
+          </div>
+          <div className="flex flex-row justify-content p-1 ml-2">
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> default </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> pastel </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> soft </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> light </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> hard </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> pale </button>
+          </div>
+          <div className="flex flex-row justify-content text-left text-[#3080af] justify-left items-center  mt-2 ml-3 mb-1">
+            <p className="text-semibold">
+              Generated Colors
             </p>
           </div>
           <div className="flex flex-row justify-content p-1 ml-2 mb-2">
             {quickScheme.map((qsColor) => {
               return (
                 <button
-                  title="Use this Color"
-                  className=" hover:bg-[#40363d] active:bg-[#40363d] focus:outline-none focus:ring focus:bg-[#40363d] p-2 rounded-[6px] h-[15px] w-[15px] border-solid border-[#40363d] flex justify-between mr-1"
+                  title={qsColor}
+                  className=" hover:bg-[#40363d] active:bg-[#40363d] focus:outline-none focus:ring focus:bg-[#40363d] p-2 rounded-[6px] h-[15px] w-[15px] border-solid border-[#163e6d] flex justify-between mr-1"
                   onClick={() => {
                     setColor(qsColor);
                   }}
