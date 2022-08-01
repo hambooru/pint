@@ -454,6 +454,9 @@ defaultColorScheme = {
   __color_underlinenav_icon: "#6e7681",
   __color_workflow_card_header_shadow: "rgba(27, 31, 35, 0.04)",
   __color_text_disabled: "#6e7681",
+  scheme: "analogic",
+  variation: "default",
+  hiddenQS: "true",
 };
 
 initialSettings = Object.keys(defaultColorScheme);
