@@ -399,7 +399,7 @@ export default function QuickChange() {
             <FcIdea className="mx-1" />
             <p className="text-semibold">
               {hiddenQS === "true"
-                ? "Need ideas? Click me show similar colors!"
+                ? "Need ideas? Click me to show similar colors!"
                 : "Showing similar colors. Click me to hide!"}
             </p>
           </button>
