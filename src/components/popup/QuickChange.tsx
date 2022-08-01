@@ -6,6 +6,7 @@ import updateScale, { updateSpecific } from "../../methods/helpers/scaleHelper";
 import * as scaleHelper from "../../methods/helpers/scaleHelper";
 import {
   pintGetUpdate,
+  pintSetNoReload,
   updateMultiple,
 } from "../../methods/helpers/storageHelper";
 import { updateOpacity } from "../../methods/helpers/opacityHelper";
@@ -30,6 +31,9 @@ import { FcIdea } from "react-icons/fc";
 
 var defaultValue = "#c0ffee";
 
+var defaultScheme = "analogic";
+var defaultVariation = "default";
+
 var quickScheme: string[] = [];
 
 export default function QuickChange() {
@@ -43,13 +47,18 @@ export default function QuickChange() {
     pintGetUpdate(settings.cg60_a371f7[0], setScalePurple);
     pintGetUpdate(settings.cg19_26a641[0], setScaleCalendar);
     pintGetUpdate(settings.cg106_ffffff[0], setScaleText);
-    quickScheme = scaleHelper.generateScheme(color, "analogic", "default", 0.5);
+    pintGetUpdate("variation", setVariation);
+    pintGetUpdate("scheme", setScheme);
+    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
   });
 
   const [color, setColor] = react.useState(`${defaultValue}`);
 
   // scale colors
   const [scaleGray, setScaleGray] = react.useState(`${defaultValue}`);
+
+  const [scheme, setScheme] = react.useState(`${defaultScheme}`);
+  const [variation, setVariation] = react.useState(`${defaultVariation}`);
 
   function paintGray() {
     updateSpecific(color, 0, 0, scales.gray);
@@ -112,6 +121,53 @@ export default function QuickChange() {
     setScaleGray(color);
   }
 
+  function setDefault() {
+      pintSetNoReload("variation", "default");
+      setVariation("default");
+    }
+
+  function setPastel() {
+    pintSetNoReload("variation", "pastel");
+    setVariation("pastel");
+    }
+
+    function setSoft() {
+      pintSetNoReload("variation", "soft");
+      setVariation("soft");
+      }
+
+  function setLight() {
+    pintSetNoReload("variation", "light");
+    setVariation("light");
+    }
+
+  function setHard() {
+    pintSetNoReload("variation", "hard");
+    setVariation("hard");
+    }
+
+  function setPale() {
+    pintSetNoReload("variation", "pale");
+    setVariation("pale");
+    }
+
+  function setTriade() {
+    pintSetNoReload("scheme", "triade");
+    setVariation("triade");
+    }
+
+  function setTetrade() {
+    pintSetNoReload("scheme", "tetrade");
+    setVariation("tetrade");
+    }
+
+  function setAnalogic() {
+    pintSetNoReload("scheme", "analogic");
+    setVariation("analogic");
+    }
+
+
+
   function paintAll() {
     updateScale(color);
     pintGetUpdate(settings.cg46_6e7681[0], setScaleGray);
@@ -127,7 +183,7 @@ export default function QuickChange() {
 
   function updateColor(color: string) {
     setColor(color);
-    quickScheme = scaleHelper.generateScheme(color, "analogic", "default", 0.5);
+    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
   }
 
   return (
@@ -146,9 +202,9 @@ export default function QuickChange() {
             </p>
           </div>
           <div className="flex flex-row justify-content p-1 ml-2">
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> triade </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> tetrade </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> analogic </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setTriade}> triade </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setTetrade}> tetrade </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setAnalogic}> analogic </button>
           </div>
           <div className="flex flex-row justify-content text-left text-[#3080af] justify-left items-center  mt-2 ml-3 mb-1">
             <p className="text-semibold">
@@ -156,12 +212,12 @@ export default function QuickChange() {
             </p>
           </div>
           <div className="flex flex-row justify-content p-1 ml-2">
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> default </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> pastel </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> soft </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> light </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> hard </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell"> pale </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setDefault}> default </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setPastel}> pastel </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setSoft}> soft </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setLight}> light </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setHard}> hard </button>
+          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setPale}> pale </button>
           </div>
           <div className="flex flex-row justify-content text-left text-[#3080af] justify-left items-center  mt-2 ml-3 mb-1">
             <p className="text-semibold">
