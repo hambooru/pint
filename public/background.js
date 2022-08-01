@@ -456,6 +456,7 @@ defaultColorScheme = {
   __color_text_disabled: "#6e7681",
   scheme: "analogic",
   variation: "default",
+  hiddenQS: "true",
 };
 
 initialSettings = Object.keys(defaultColorScheme);

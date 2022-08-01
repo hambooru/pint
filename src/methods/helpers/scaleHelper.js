@@ -225,11 +225,18 @@ export function updateAccent(color) {
 
 export function generateScheme(color, scheme, variation, distance) {
   let s = new ColorScheme();
-  s.from_hex(chroma(color).hex().slice(-6))
-    .scheme(scheme)
-    .variation(variation)
-    .add_complement(true)
-    .distance(distance);
+  if (scheme === "analogic") {
+    s.from_hex(chroma(color).hex().slice(-6))
+      .scheme(scheme)
+      .variation(variation)
+      .add_complement(true)
+      .distance(distance);
+  } else {
+    s.from_hex(chroma(color).hex().slice(-6))
+      .scheme(scheme)
+      .variation(variation)
+      .distance(distance);
+  }
 
   return s.colors();
 }

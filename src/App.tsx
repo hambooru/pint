@@ -4,7 +4,7 @@ import Popup from "./views/Popup";
 import Options from "./views/Options";
 
 export default function App() {
-  const [isOptionsUi, setOptionsUI] = useState(window.innerWidth > 375);
+  const [isOptionsUi, setOptionsUI] = useState(window.innerWidth > 475);
 
   const updateMedia = () => {
     setOptionsUI(window.innerWidth > 475);

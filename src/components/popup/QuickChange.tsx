@@ -49,6 +49,7 @@ export default function QuickChange() {
     pintGetUpdate(settings.cg106_ffffff[0], setScaleText);
     pintGetUpdate("variation", setVariation);
     pintGetUpdate("scheme", setScheme);
+    pintGetUpdate("hiddenQS", setHiddenQS);
     quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
   });
 
@@ -59,6 +60,7 @@ export default function QuickChange() {
 
   const [scheme, setScheme] = react.useState(`${defaultScheme}`);
   const [variation, setVariation] = react.useState(`${defaultVariation}`);
+  const [hiddenQS, setHiddenQS] = react.useState("true");
 
   function paintGray() {
     updateSpecific(color, 0, 0, scales.gray);
@@ -119,54 +121,62 @@ export default function QuickChange() {
   function paintText() {
     updateMultiple(settings.cg106_ffffff, chroma(color).hex());
     setScaleGray(color);
+    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
   }
 
   function setDefault() {
-      pintSetNoReload("variation", "default");
-      setVariation("default");
-    }
+    pintSetNoReload("variation", "default");
+    setVariation("default");
+    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
+  }
 
   function setPastel() {
     pintSetNoReload("variation", "pastel");
     setVariation("pastel");
-    }
+    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
+  }
 
-    function setSoft() {
-      pintSetNoReload("variation", "soft");
-      setVariation("soft");
-      }
+  function setSoft() {
+    pintSetNoReload("variation", "soft");
+    setVariation("soft");
+    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
+  }
 
   function setLight() {
     pintSetNoReload("variation", "light");
     setVariation("light");
-    }
+    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
+  }
 
   function setHard() {
     pintSetNoReload("variation", "hard");
     setVariation("hard");
-    }
+    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
+  }
 
   function setPale() {
     pintSetNoReload("variation", "pale");
     setVariation("pale");
-    }
+    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
+  }
 
   function setTriade() {
     pintSetNoReload("scheme", "triade");
-    setVariation("triade");
-    }
+    setScheme("triade");
+    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
+  }
 
   function setTetrade() {
     pintSetNoReload("scheme", "tetrade");
-    setVariation("tetrade");
-    }
+    setScheme("tetrade");
+    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
+  }
 
   function setAnalogic() {
     pintSetNoReload("scheme", "analogic");
-    setVariation("analogic");
-    }
-
-
+    setScheme("analogic");
+    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
+  }
 
   function paintAll() {
     updateScale(color);
@@ -186,66 +196,19 @@ export default function QuickChange() {
     quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
   }
 
+  function hideQS() {
+    if (hiddenQS === "true") {
+      pintSetNoReload("hiddenQS", "false");
+      setHiddenQS("false");
+    } else {
+      pintSetNoReload("hiddenQS", "true");
+      setHiddenQS("true");
+    }
+  }
+
   return (
     <div>
-      <div className="flex flex-col rounded-lg mt-4 mx-3">
-        <div className="flex-1 flex-col rounded-[6px] bg-[#06193a] border-solid border-[#163e6d] border-2 ">
-          <div className="flex flex-row justify-content text-left text-white justify-left items-center  mt-2 ml-2 mb-1">
-            <FcIdea className="mx-1" />
-            <p className="text-semibold">
-              Need ideas? These colors compliment your current pick!
-            </p>
-          </div>
-          <div className="flex flex-row justify-content text-left text-[#3080af] justify-left items-center  mt-2 ml-3 mb-1">
-            <p className="text-semibold">
-              Scheme Variations
-            </p>
-          </div>
-          <div className="flex flex-row justify-content p-1 ml-2">
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setTriade}> triade </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setTetrade}> tetrade </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setAnalogic}> analogic </button>
-          </div>
-          <div className="flex flex-row justify-content text-left text-[#3080af] justify-left items-center  mt-2 ml-3 mb-1">
-            <p className="text-semibold">
-              Color Variations
-            </p>
-          </div>
-          <div className="flex flex-row justify-content p-1 ml-2">
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setDefault}> default </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setPastel}> pastel </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setSoft}> soft </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setLight}> light </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setHard}> hard </button>
-          <button className="mr-1 bg-[#163e6d] text-[#3ba6ff] py-[2px] px-2 justify-between align-middle rounded-full table-cell" onClick={setPale}> pale </button>
-          </div>
-          <div className="flex flex-row justify-content text-left text-[#3080af] justify-left items-center  mt-2 ml-3 mb-1">
-            <p className="text-semibold">
-              Generated Colors
-            </p>
-          </div>
-          <div className="flex flex-row justify-content p-1 ml-2 mb-2">
-            {quickScheme.map((qsColor) => {
-              return (
-                <button
-                  title={qsColor}
-                  className=" hover:bg-[#40363d] active:bg-[#40363d] focus:outline-none focus:ring focus:bg-[#40363d] p-2 rounded-[6px] h-[15px] w-[15px] border-solid border-[#163e6d] flex justify-between mr-1"
-                  onClick={() => {
-                    setColor(qsColor);
-                  }}
-                  style={{
-                    borderWidth: "2px 2px 2px 2px",
-                    borderStyle: "solid",
-                    borderColor: "#30363d",
-                    backgroundColor: chroma(qsColor).hex(),
-                  }}
-                ></button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-      <div className="pint flex flex-row  m-2">
+      <div className="pint flex flex-row  mx-2 mt-2 mb-1">
         <div className="flex-1 flex-col rounded-[6px] m-1 bg-[#010409] border-solid border-[#30363d] border-2 ">
           <div className="flex flex-row justify-content text-left text-white justify-left items-center rounded-t-[6px] bg-[#161b22] p-1">
             <BsFillPaletteFill className="mx-1" size={15} />
@@ -279,7 +242,7 @@ export default function QuickChange() {
             </div>
           </div>
           <div className="flex flex-row justify-content text-center text-white justify-center items-center p-1 mt-1">
-            <div className="flex-start align-left text-l  mb-2 rounded-t-lg">
+            <div className="flex-start align-left text-l rounded-t-lg">
               <p className="">Click a button to set a color</p>
             </div>
           </div>
@@ -425,6 +388,154 @@ export default function QuickChange() {
           <div className="flex-1 flex-col rounded-[6px] bg-[#06193a] border-solid border-[#163e6d] border-2 justify-center mt-2">
             <p className="text-center">Made with ❤️ - fuwa</p>
           </div> */}
+        </div>
+      </div>
+      <div className="flex flex-col rounded-lg mb-3 mx-3">
+        <div className="flex-1 flex-col rounded-[6px] bg-[#06193a] border-solid border-[#163e6d] border-2 ">
+          <button
+            className="flex flex-row justify-content text-left text-white justify-left items-center  mt-2 ml-2 mb-2"
+            onClick={hideQS}
+          >
+            <FcIdea className="mx-1" />
+            <p className="text-semibold">
+              {hiddenQS === "true"
+                ? "Need ideas? Click me show similar colors!"
+                : "Showing similar colors. Click me to hide!"}
+            </p>
+          </button>
+          <div className={`${hiddenQS === "true" ? "hidden" : ""}`}>
+            <div className="flex flex-row justify-content text-left text-[#3080af] justify-left items-center  mt-2 ml-3 mb-1">
+              <p className="text-semibold">Scheme Variations</p>
+            </div>
+            <div className="flex flex-row justify-content p-1 ml-2">
+              <button
+                className={`mr-1 ${
+                  scheme === "triade"
+                    ? "bg-[#1f6feb] text-[#ffffff]"
+                    : "bg-[#163e6d] text-[#3ba6ff]"
+                }  hover:bg-[#1d5393] py-[2px] px-2 justify-between align-middle rounded-full table-cell`}
+                onClick={setTriade}
+              >
+                {" "}
+                triade{" "}
+              </button>
+              <button
+                className={`mr-1 ${
+                  scheme === "tetrade"
+                    ? "bg-[#1f6feb] text-[#ffffff]"
+                    : "bg-[#163e6d] text-[#3ba6ff]"
+                } hover:bg-[#1d5393] py-[2px] px-2 justify-between align-middle rounded-full table-cell`}
+                onClick={setTetrade}
+              >
+                {" "}
+                tetrade{" "}
+              </button>
+              <button
+                className={`mr-1 ${
+                  scheme === "analogic"
+                    ? "bg-[#1f6feb] text-[#ffffff]"
+                    : "bg-[#163e6d] text-[#3ba6ff]"
+                } hover:bg-[#1d5393] py-[2px] px-2 justify-between align-middle rounded-full table-cell`}
+                onClick={setAnalogic}
+              >
+                {" "}
+                analogic{" "}
+              </button>
+            </div>
+            <div className="flex flex-row justify-content text-left text-[#3080af] justify-left items-center  mt-2 ml-3 mb-1">
+              <p className="text-semibold">Color Variations</p>
+            </div>
+            <div className="flex flex-row justify-content p-1 ml-2">
+              <button
+                className={`mr-1 ${
+                  variation === "default"
+                    ? "bg-[#1f6feb] text-[#ffffff]"
+                    : "bg-[#163e6d] text-[#3ba6ff]"
+                } hover:bg-[#1d5393] py-[2px] px-2 justify-between align-middle rounded-full table-cell`}
+                onClick={setDefault}
+              >
+                {" "}
+                default{" "}
+              </button>
+              <button
+                className={`mr-1 ${
+                  variation === "pastel"
+                    ? "bg-[#1f6feb] text-[#ffffff]"
+                    : "bg-[#163e6d] text-[#3ba6ff]"
+                } hover:bg-[#1d5393] py-[2px] px-2 justify-between align-middle rounded-full table-cell`}
+                onClick={setPastel}
+              >
+                {" "}
+                pastel{" "}
+              </button>
+              <button
+                className={`mr-1 ${
+                  variation === "soft"
+                    ? "bg-[#1f6feb] text-[#ffffff]"
+                    : "bg-[#163e6d] text-[#3ba6ff]"
+                } hover:bg-[#1d5393] py-[2px] px-2 justify-between align-middle rounded-full table-cell`}
+                onClick={setSoft}
+              >
+                {" "}
+                soft{" "}
+              </button>
+              <button
+                className={`mr-1 ${
+                  variation === "light"
+                    ? "bg-[#1f6feb] text-[#ffffff]"
+                    : "bg-[#163e6d] text-[#3ba6ff]"
+                } hover:bg-[#1d5393] py-[2px] px-2 justify-between align-middle rounded-full table-cell`}
+                onClick={setLight}
+              >
+                {" "}
+                light{" "}
+              </button>
+              <button
+                className={`mr-1 ${
+                  variation === "hard"
+                    ? "bg-[#1f6feb] text-[#ffffff]"
+                    : "bg-[#163e6d] text-[#3ba6ff]"
+                } hover:bg-[#1d5393] py-[2px] px-2 justify-between align-middle rounded-full table-cell`}
+                onClick={setHard}
+              >
+                {" "}
+                hard{" "}
+              </button>
+              <button
+                className={`mr-1 ${
+                  variation === "pale"
+                    ? "bg-[#1f6feb] text-[#ffffff]"
+                    : "bg-[#163e6d] text-[#3ba6ff]"
+                } hover:bg-[#1d5393] py-[2px] px-2 justify-between align-middle rounded-full table-cell`}
+                onClick={setPale}
+              >
+                {" "}
+                pale{" "}
+              </button>
+            </div>
+            <div className="flex flex-row justify-content text-left text-[#3080af] justify-left items-center  mt-2 ml-3 mb-1">
+              <p className="text-semibold">Generated Colors</p>
+            </div>
+            <div className="flex flex-row justify-content p-1 ml-2 mb-2">
+              {quickScheme.map((qsColor) => {
+                return (
+                  <button
+                    title={qsColor}
+                    className=" hover:bg-[#40363d] active:bg-[#40363d] focus:outline-none focus:ring focus:bg-[#40363d] p-2 rounded-[6px] h-[15px] w-[15px] border-solid border-[#163e6d] flex justify-between mr-1"
+                    onClick={() => {
+                      setColor(qsColor);
+                    }}
+                    style={{
+                      borderWidth: "2px 2px 2px 2px",
+                      borderStyle: "solid",
+                      borderColor: "#30363d",
+                      backgroundColor: chroma(qsColor).hex(),
+                    }}
+                  ></button>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </div>
