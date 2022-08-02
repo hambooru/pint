@@ -54,9 +54,9 @@ Documentation is planned to debut on [fuwadocs](https://docs.fuwa.sh/pint/), how
 contributions are welcome ❤️. however, please do keep in mind that this is a very early project and things are bound to be messy. while code quality is my top priority, i'm currently implementing it ever so slowly.
 
 ## project structure
+
 [![Structure](https://images.repography.com/27896465/fuwaa/pint/structure/a993ba4f490beac88c1084429e54e710_table.svg)](https://github.com/fuwaa/pint)
 
 ###### This extension is licensed under the GPLv3 License.
 
 ###### This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with GitHub, Inc. and Git, or any of its subsidiaries or its affiliates.
-
