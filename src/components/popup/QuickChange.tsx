@@ -27,6 +27,7 @@ import * as settings from "../../methods/config/colorGroups.js";
 import * as scales from "../../methods/helpers/scaleHelper.js";
 import chroma from "chroma-js";
 import { FcIdea } from "react-icons/fc";
+import { updateOpacity } from "../../methods/helpers/opacityHelper";
 
 var defaultValue = "#c0ffee";
 
@@ -196,6 +197,7 @@ export default function QuickChange() {
     pintGetUpdate(settings.cg60_a371f7[0], setScalePurple);
     pintGetUpdate(settings.cg19_26a641[0], setScaleCalendar);
     pintGetUpdate(settings.cg106_ffffff[0], setScaleText);
+    updateOpacity();
     chrome.tabs.reload();
   }
 
