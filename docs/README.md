@@ -10,8 +10,8 @@
 
 ![1](https://user-images.githubusercontent.com/53419401/182546037-c944fca4-f9b9-438f-aa7b-4e418807e0e8.png)
 
-
 ### project features
+
 - Complete control of personalisation of every element.
 - With the right settings, you can also achieve light theme too.
 - Quickly paint groups of colors with the Group Painter.
@@ -61,9 +61,9 @@ Documentation is planned to debut on [fuwadocs](https://docs.fuwa.sh/pint/), how
 contributions are welcome ❤️. however, please do keep in mind that this is a very early project and things are bound to be [messy](https://github.com/fuwaa/pint/issues/37). while code quality is my top priority, i'm implementing it as i go (which is a bit slow since I'm porting this myself to typescript) and would appreciate help regarding it so we could learn more from it too.
 
 ## project structure
+
 [![Structure](https://images.repography.com/27896465/fuwaa/pint/structure/a993ba4f490beac88c1084429e54e710_table.svg)](https://github.com/fuwaa/pint)
 
 ###### This extension is licensed under the GPLv3 License.
 
 ###### This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with GitHub, Inc. and Git, or any of its subsidiaries or its affiliates.
-
