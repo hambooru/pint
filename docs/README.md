@@ -26,12 +26,20 @@
 you can install this extension via the chrome web store (old version) or manually.
 
 ### chrome web store installation
-
-> ⚡ Chrome extension update is currently pending approval!
-
 <a href="https://chrome.google.com/webstore/detail/gitccentify/mjhmdkcefcklflcmmokoahfdodcpeobg"><img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png" /></a>
 
-### manual/source installation
+### precompiled installation (.crx)
+1. grab the latest release [here](https://github.com/fuwaa/pint/releases)
+2. open it using chrome
+
+### precompiled installation (.zip)
+1. grab the latest release [here](https://github.com/fuwaa/pint/releases)
+2. unzip into a directory
+3. turn on developer mode
+4. load unpacked extension
+5. load the build folder
+
+### source installation
 
 1. clone this repository
 2. run `yarn build`
