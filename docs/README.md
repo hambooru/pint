@@ -1,4 +1,4 @@
-# <a  href="https://projects.fuwa.sh/pint/"><img align="left" height="100" src="/docs/assets/pint-logo.png"/></a> **pint** (formerly gitccentify)
+# <a  href="https://projects.fuwa.sh/pint/"><img align="left" height="100" src="/docs/assets/pint-logo.png"/></a> **Pint** for GitHub
 
 ![pint-status](https://img.shields.io/badge/pint%20src-2.0-green)
 ![chrome-web-store-version](https://img.shields.io/chrome-web-store/v/mjhmdkcefcklflcmmokoahfdodcpeobg)
@@ -18,6 +18,8 @@
 you can install this extension via the chrome web store (old version) or manually.
 
 ### chrome web store installation
+
+> ⚡ Chrome extension update is currently pending approval!
 
 <a href="https://chrome.google.com/webstore/detail/gitccentify/mjhmdkcefcklflcmmokoahfdodcpeobg"><img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png" /></a>
 
