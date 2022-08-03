@@ -35,7 +35,14 @@ var defaultVariation = "default";
 
 var quickScheme: string[] = [];
 
-export default function QuickChange() {
+interface Props {
+  color: string;
+  setColor: (type: string) => void;
+}
+
+export default function Sidebar(props: Props) {
+  var { color, setColor } = props;
+
   react.useLayoutEffect(() => {
     pintGetUpdate(settings.cg46_6e7681[0], setScaleGray);
     pintGetUpdate(settings.cg67_bb8009[0], setScaleYellow);
@@ -51,8 +58,6 @@ export default function QuickChange() {
     pintGetUpdate("hiddenQS", setHiddenQS);
     quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
   });
-
-  const [color, setColor] = react.useState(`${defaultValue}`);
 
   // scale colors
   const [scaleGray, setScaleGray] = react.useState(`${defaultValue}`);
@@ -206,8 +211,8 @@ export default function QuickChange() {
   }
 
   return (
-    <div>
-      <div className="pint flex flex-row  mx-2 mt-2 mb-1">
+    <aside className="w-[428px] sticky flex left-0 top-0 flex-col h-screen ">
+      <div className="w-[410px] pint flex flex-row  mx-2 mt-2 mb-1 pt-[80px]">
         <div className="flex-1 flex-col rounded-[6px] m-1 bg-[#010409] border-solid border-[#30363d] border-2 ">
           <div className="flex flex-row justify-content text-left text-white justify-left items-center rounded-t-[6px] bg-[#161b22] p-1">
             <BsFillPaletteFill className="mx-1" size={15} />
@@ -537,6 +542,6 @@ export default function QuickChange() {
           </div>
         </div>
       </div>
-    </div>
+    </aside>
   );
 }

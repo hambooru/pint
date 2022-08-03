@@ -3,14 +3,8 @@ import "../../assets/styles/App.css";
 import { IoMdSettings } from "react-icons/io";
 import {
   AiFillGithub,
-  AiFillCloseCircle,
-  AiFillClockCircle,
-  AiFillCheckCircle,
-  AiFillCiCircle,
-  AiFillHeart,
 } from "react-icons/ai";
-import { BsFillCalendar3WeekFill, BsMenuButtonWideFill } from "react-icons/bs";
-import { MdTextSnippet, MdFormatColorText } from "react-icons/md";
+
 export default function Header() {
   function openOptions() {
     chrome.runtime.openOptionsPage();
@@ -37,14 +31,14 @@ export default function Header() {
       <div>
         <button
           title="Advanced"
-          className="flex-none p-1 rounded-lg text-xl text-white p-2"
+          className="flex-none rounded-lg text-xl text-white p-2"
           onClick={openGithub}
         >
           <AiFillGithub />
         </button>
         <button
           title="Advanced"
-          className="flex-none p-1 rounded-lg text-xl text-white p-2"
+          className="flex-none rounded-lg text-xl text-white p-2"
           onClick={openOptions}
         >
           <IoMdSettings />

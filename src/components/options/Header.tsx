@@ -1,17 +1,47 @@
 import logo from "../../assets/images/pint.svg";
 import "../../assets/styles/App.css";
+import { IoMdSettings } from "react-icons/io";
+import { AiFillGithub } from "react-icons/ai";
 
 export default function Header() {
+  function openOptions() {
+    chrome.runtime.openOptionsPage();
+  }
+
+  function openGithub() {
+    chrome.tabs.create({
+      url: "https://github.com/fuwaa/pint",
+      selected: true,
+    });
+  }
+
   return (
-    <div className="flex flex-row rounded-lg mb-1 m-2 mx-3 p-1 justify-between items-center">
+    <div className="sticky top-0 z-30 w-screen flex flex-row mb-2 p-1 justify-between items-center bg-[#161b22] h-[64px]  px-3 px-md-4 px-lg-5 ">
       <div className="flex flex-row">
-        <img src={logo} className="flex-none w-12" alt="logo" />
-        <div className="flex-col p-1 text-white">
-          <p className="flex-1 self-center text-xl"> pint for github </p>
-          <p className="flex-1 self-center text-l">2.0-dev - advanced mode</p>
+        <img src={logo} className="flex-none w-10" alt="logo" />
+        <div className="flex-col p-1 text-white align-middle ml-2 ">
+          <p className="flex-1 text-left text-md mt-1"> pint for github</p>
+          <p className="flex-1 text-left text-md mb-1 text-gray-400">
+            sign in to broadcast your palette
+          </p>
         </div>
       </div>
-      <div></div>
+      <div>
+        <button
+          title="Advanced"
+          className="flex-none rounded-lg text-xl text-white p-2"
+          onClick={openGithub}
+        >
+          <AiFillGithub />
+        </button>
+        <button
+          title="Advanced"
+          className="flex-none rounded-lg text-xl text-white p-2"
+          onClick={openOptions}
+        >
+          <IoMdSettings />
+        </button>
+      </div>
     </div>
   );
 }

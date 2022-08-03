@@ -11,12 +11,7 @@ var defaultValue = "#c0ffee";
 
 interface Props {
   settingName: string;
-  colorPickerColor: {
-    r: number;
-    g: number;
-    b: number;
-    a: number;
-  };
+  colorPickerColor: string;
 }
 
 export default function ChangeCard(props: Props) {
@@ -34,9 +29,8 @@ export default function ChangeCard(props: Props) {
   const [current, setCurrent] = react.useState(`${defaultValue}`);
 
   function updateColor() {
-    var stringifiedColor = `rgba(${colorPickerColor.r},${colorPickerColor.g},${colorPickerColor.b},${colorPickerColor.a})`;
-    setCurrent(stringifiedColor);
-    pintSetNoReload(settingName, stringifiedColor);
+    setCurrent(colorPickerColor);
+    pintSetNoReload(settingName, colorPickerColor);
   }
 
   function updateColorExplicitly(value: string) {
@@ -46,22 +40,22 @@ export default function ChangeCard(props: Props) {
 
   return (
     <div className="pint flex flex-row w-[260px] text-center">
-      <div className="flex-1 flex-col rounded-lg m-1 p-1 bg-white">
+      <div className="flex-1 flex-col rounded-[6px] m-1 p-1 bg-[#010409] border-solid border-[#30363d] border-2">
         <CardTitle name={current} textcolor={current} />
-        <CardTitle name={settingReadable} />
+        <CardTitle name={settingReadable} textcolor="#010409" />
         <div className="flex flex-row justify-center justify-items-center">
           <div className="flex align-middle justify-content p-1">
             <input
               id="aaa"
               type="text"
-              className="p-2 text-center w-full"
-              placeholder="insert replacement value"
+              className="p-2 text-center text-white  w-full bg-[#010409]"
+              placeholder="insert custom value/css"
               onChange={(e) => updateColorExplicitly(e.target.value)}
             />
           </div>
           <button
             title="updateColor"
-            className="bg-[#0d1117] hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-2 ml-2 mx-2 my-1 rounded-full text-white"
+            className="bg-[#0041c4] hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-2 ml-2 mx-2 my-1 rounded-full text-white"
             onClick={updateColor}
           >
             <IoIosBrush className="text-xl p-1 text-white" />
