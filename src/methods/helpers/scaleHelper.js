@@ -1,12 +1,12 @@
-import chroma from "chroma-js";
-import ColorScheme from "color-scheme";
+import chroma from 'chroma-js'
+import ColorScheme from 'color-scheme'
 
-import * as settings from "../config/colorGroups.js";
+import * as settings from '../config/colorGroups.js'
 
-import { updateMultiple } from "./storageHelper.js";
+import { updateMultiple } from './storageHelper.js'
 
 // ----------- ASSIGNABLES -----------
-export let orange = [
+export const orange = [
   settings.cg28_3d1300,
   settings.cg39_5a1e02,
   settings.cg47_762d0a,
@@ -16,10 +16,10 @@ export let orange = [
   settings.cg83_f0883e,
   settings.cg97_ffa657,
   settings.cg101_ffc680,
-  settings.cg105_ffdfb6,
-];
+  settings.cg105_ffdfb6
+]
 
-export let yellow = [
+export const yellow = [
   settings.cg23_341a00,
   settings.cg34_4b2900,
   settings.cg44_693e00,
@@ -29,10 +29,10 @@ export let yellow = [
   settings.cg74_d29922,
   settings.cg80_e3b341,
   settings.cg85_f2cc60,
-  settings.cg90_f8e3a1,
-];
+  settings.cg90_f8e3a1
+]
 
-export let gray = [
+export const gray = [
   settings.cg8_0d1117,
   settings.cg13_161b22,
   settings.cg17_21262d,
@@ -42,10 +42,10 @@ export let gray = [
   settings.cg55_8b949e,
   settings.cg64_b1bac4,
   settings.cg71_c9d1d9,
-  settings.cg84_f0f6fc,
-];
+  settings.cg84_f0f6fc
+]
 
-export let blue = [
+export const blue = [
   settings.cg6_051d4d,
   settings.cg7_0c2d6b,
   settings.cg9_0d419d,
@@ -55,10 +55,10 @@ export let blue = [
   settings.cg38_58a6ff,
   settings.cg49_79c0ff,
   settings.cg61_a5d6ff,
-  settings.cg72_cae8ff,
-];
+  settings.cg72_cae8ff
+]
 
-export let green = [
+export const green = [
   settings.cg5_04260f,
   settings.cg4_033a16,
   settings.cg11_0f5323,
@@ -68,10 +68,10 @@ export let green = [
   settings.cg29_3fb950,
   settings.cg36_56d364,
   settings.cg51_7ee787,
-  settings.cg63_aff5b4,
-];
+  settings.cg63_aff5b4
+]
 
-export let red = [
+export const red = [
   settings.cg33_490202,
   settings.cg43_67060c,
   settings.cg56_8e1519,
@@ -81,10 +81,10 @@ export let red = [
   settings.cg93_ff7b72,
   settings.cg95_ffa198,
   settings.cg99_ffc1ba,
-  settings.cg103_ffdcd7,
-];
+  settings.cg103_ffdcd7
+]
 
-export let purple = [
+export const purple = [
   settings.cg20_271052,
   settings.cg27_3c1e70,
   settings.cg35_553098,
@@ -94,10 +94,10 @@ export let purple = [
   settings.cg68_bc8cff,
   settings.cg75_d2a8ff,
   settings.cg79_e2c5ff,
-  settings.cg82_eddeff,
-];
+  settings.cg82_eddeff
+]
 
-export let pink = [
+export const pink = [
   settings.cg30_42062a,
   settings.cg40_5e103e,
   settings.cg50_7d2457,
@@ -107,10 +107,10 @@ export let pink = [
   settings.cg87_f778ba,
   settings.cg94_ff9bce,
   settings.cg98_ffbedd,
-  settings.cg102_ffdaec,
-];
+  settings.cg102_ffdaec
+]
 
-export let coral = [
+export const coral = [
   settings.cg31_460701,
   settings.cg42_640D04,
   settings.cg53_872012,
@@ -120,48 +120,48 @@ export let coral = [
   settings.cg88_F78166,
   settings.cg96_FFA28B,
   settings.cg100_FFC2B2,
-  settings.cg105_ffdfb6,
-];
+  settings.cg105_ffdfb6
+]
 
-export let calendar = [
+export const calendar = [
   settings.cg10_0e4429,
   settings.cg2_006d32,
   settings.cg19_26a641,
-  settings.cg26_39d353,
-];
+  settings.cg26_39d353
+]
 
 // ----------- METHODS -----------
 
-export default function updateScale(color) {
-  updateAnnoyances(color);
+export default function updateScale (color) {
+  updateAnnoyances(color)
   // gray
-  updateSpecific(color, 0, 0, gray);
+  updateSpecific(color, 0, 0, gray)
   // blue
-  updateSpecific(color, 1, 0, blue);
+  updateSpecific(color, 1, 0, blue)
   // green
-  updateSpecific(color, 3, 0, green);
+  updateSpecific(color, 3, 0, green)
   // yellow
-  updateSpecific(color, 2, 0, yellow);
+  updateSpecific(color, 2, 0, yellow)
   // orange
-  updateSpecific(color, 1.5, 0, orange);
+  updateSpecific(color, 1.5, 0, orange)
   // red
-  updateSpecific(color, 0, 2, red);
+  updateSpecific(color, 0, 2, red)
   // purple
-  updateSpecific(color, 0, 2.5, purple);
+  updateSpecific(color, 0, 2.5, purple)
   // pink
-  updateSpecific(color, 2, 0, pink);
+  updateSpecific(color, 2, 0, pink)
   // coral
-  updateSpecific(color, 2, 0, coral);
+  updateSpecific(color, 2, 0, coral)
 
   // calendar
-  updateCalendar(color, 2, calendar);
+  updateCalendar(color, 2, calendar)
 }
 
-export function updateText(color) {
-  updateMultiple(settings.cg106_ffffff, chroma(color).hex());
+export function updateText (color) {
+  updateMultiple(settings.cg106_ffffff, chroma(color).hex())
 }
 
-export function updateCalendar(color, saturate, scale) {
+export function updateCalendar (color, saturate, scale) {
   if (/^\d/.test(color.slice(-4))) {
     // scale = scale.reverse();
   }
@@ -174,23 +174,23 @@ export function updateCalendar(color, saturate, scale) {
         .saturate(saturate)
         .alpha((i + 1) * 0.2)
         .hex()
-    );
+    )
   }
 }
 
-export function updateAnnoyances(color) {
+export function updateAnnoyances (color) {
   if (/^\d/.test(color.slice(-4))) {
-    updateMultiple(settings.cg3_010409, chroma(color).brighten(0.3).hex());
-    updateMultiple(settings.cg106_ffffff, chroma(color).darken(4).hex());
-    updateMultiple(settings.cgshadows, chroma(color).darken(3.6).hex());
+    updateMultiple(settings.cg3_010409, chroma(color).brighten(0.3).hex())
+    updateMultiple(settings.cg106_ffffff, chroma(color).darken(4).hex())
+    updateMultiple(settings.cgshadows, chroma(color).darken(3.6).hex())
   } else {
-    updateMultiple(settings.cg3_010409, chroma(color).darken(0.3).hex());
-    updateMultiple(settings.cg106_ffffff, chroma(color).brighten(4).hex());
-    updateMultiple(settings.cgshadows, chroma(color).brighten(3.6).hex());
+    updateMultiple(settings.cg3_010409, chroma(color).darken(0.3).hex())
+    updateMultiple(settings.cg106_ffffff, chroma(color).brighten(4).hex())
+    updateMultiple(settings.cgshadows, chroma(color).brighten(3.6).hex())
   }
 }
 
-export function updateSpecific(color, desaturate, saturate, scale) {
+export function updateSpecific (color, desaturate, saturate, scale) {
   if (/^\d/.test(color.slice(-4))) {
     // scale = scale.reverse();
   }
@@ -198,62 +198,62 @@ export function updateSpecific(color, desaturate, saturate, scale) {
   for (let i = 0; i < scale.length; i++) {
     /^\d/.test(color.slice(-4))
       ? updateMultiple(
-          scale[i],
-          chroma(color)
-            .brighten(i * 0.4)
-            .saturate(saturate)
-            .desaturate(desaturate)
-            .hex()
-        )
+        scale[i],
+        chroma(color)
+          .brighten(i * 0.4)
+          .saturate(saturate)
+          .desaturate(desaturate)
+          .hex()
+      )
       : updateMultiple(
-          scale[i],
-          chroma(color)
-            .darken(i * 0.4)
-            .saturate(saturate)
-            .desaturate(desaturate)
-            .hex()
-        );
+        scale[i],
+        chroma(color)
+          .darken(i * 0.4)
+          .saturate(saturate)
+          .desaturate(desaturate)
+          .hex()
+      )
   }
 }
 
-export function updateAccent(color) {
-  updateCalendar(color);
-  updateSpecific(color, 0, 0, blue);
-  updateSpecific(color, 0, 0, green);
-  updateSpecific(color, 0, 0, yellow);
+export function updateAccent (color) {
+  updateCalendar(color)
+  updateSpecific(color, 0, 0, blue)
+  updateSpecific(color, 0, 0, green)
+  updateSpecific(color, 0, 0, yellow)
 }
 
-export function generateScheme(color, scheme, variation, distance) {
-  let s = new ColorScheme();
-  if (scheme === "analogic") {
+export function generateScheme (color, scheme, variation, distance) {
+  const s = new ColorScheme()
+  if (scheme === 'analogic') {
     s.from_hex(chroma(color).hex().slice(-6))
       .scheme(scheme)
       .variation(variation)
       .add_complement(true)
-      .distance(distance);
+      .distance(distance)
   } else {
     s.from_hex(chroma(color).hex().slice(-6))
       .scheme(scheme)
       .variation(variation)
-      .distance(distance);
+      .distance(distance)
   }
 
-  return s.colors();
+  return s.colors()
 }
 
-export function generateSaturation(color, setting) {
-  let colors = [];
+export function generateSaturation (color, setting) {
+  const colors = []
   for (let i = 0; i < 10; i++) {
     /^\d/.test(color.slice(-4))
       ? colors.push(
-          chroma(color)
-            .darken(i * 0.4)
-            .hex()
-        )
+        chroma(color)
+          .darken(i * 0.4)
+          .hex()
+      )
       : colors.push(
-          chroma(color)
-            .brighten(i * 0.4)
-            .hex()
-        );
+        chroma(color)
+          .brighten(i * 0.4)
+          .hex()
+      )
   }
 }
