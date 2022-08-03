@@ -19,7 +19,7 @@
     "default_popup": "index.html"
   },
 
-  "description": "pint is a browser extension that makes your github experience colorful, just the way you like it",
+  "description": "Pint for GitHub is a theming engine that allows you to customize and theme your developer experience on GitHub.",
 
   "author": {
     "name": "Jariel Que",

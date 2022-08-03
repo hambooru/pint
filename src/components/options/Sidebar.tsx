@@ -30,6 +30,7 @@ import chroma from "chroma-js";
 import { FcIdea } from "react-icons/fc";
 import { BiReset } from "react-icons/bi";
 import * as baseSettings from "../../methods/config/settings";
+import { updateOpacity } from "../../methods/helpers/opacityHelper";
 
 var defaultValue = "#c0ffee";
 
@@ -210,6 +211,7 @@ export default function Sidebar(props: Props) {
     pintGetUpdate(settings.cg60_a371f7[0], setScalePurple);
     pintGetUpdate(settings.cg19_26a641[0], setScaleCalendar);
     pintGetUpdate(settings.cg106_ffffff[0], setScaleText);
+    updateOpacity();
     setColor(color);
   }
 
