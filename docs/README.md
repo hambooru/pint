@@ -8,10 +8,18 @@
 
 [pint](https://projects.fuwa.sh/pint/) is a theming engine that allows you to theme your github experience.
 
-![image](https://user-images.githubusercontent.com/53419401/182528225-8f1b8d54-2e7a-4a5c-a8de-6671e7585dc6.png)
+![1](https://user-images.githubusercontent.com/53419401/182546037-c944fca4-f9b9-438f-aa7b-4e418807e0e8.png)
 
-<br>
-<br>
+
+### project features
+- Complete control of personalisation of every element.
+- With the right settings, you can also achieve light theme too.
+- Quickly paint groups of colors with the Group Painter.
+- Quickly paint the entire site with the Update All button.
+- Individual control of every possible element (change the color of any individual element without affecting the rest)
+- Suggest colors that match the color you picked.
+- Custom CSS to modify each button to each div just the way you like it.
+- Free and Open-source and will always be.
 
 ## installation
 
