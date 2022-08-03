@@ -1,6 +1,6 @@
 // HACK: manifest workaround
 /* eslint-disable no-undef */
-/*global chrome*/
+/* global chrome */
 
 defaultColorScheme = {
   __color_accent_emphasis: "#1f6feb",
@@ -466,23 +466,21 @@ initialSettings = Object.keys(defaultColorScheme);
 // defaultColorScheme object
 chrome.runtime.onInstalled.addListener(() => {
   initialSettings.forEach((initialSetting) => {
-    let key = {};
+    const key = {};
     key[`${initialSetting}`] = defaultColorScheme[initialSetting];
     chrome.storage.local.set(key);
-    console.log(
-      "Setup: Configuring " +
-        initialSetting +
-        " >> " +
-        defaultColorScheme[initialSetting]
-    );
   });
-  chrome.tabs.create({ url: "https://pint.sh/success" });
+  // open ./pint-newinstall/index.html in new page
+  chrome.tabs.create({
+    url: "./pint-newinstall/index.html",
+    active: true,
+  });
 });
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   chrome.scripting.executeScript(
     {
-      target: { tabId: tabId },
+      target: { tabId },
       files: ["initial.js"],
     },
     () => chrome.runtime.lastError

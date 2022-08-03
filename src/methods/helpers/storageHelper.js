@@ -1,11 +1,11 @@
-/*global chrome*/
+/* global chrome */
 
 /**
  *  Set a key and autoreload
  *  @param {string} setting - setting to update
  */
 export function pintSet(setting, value) {
-  var pintKey = {};
+  const pintKey = {};
   pintKey[`${setting}`] = value;
   chrome.storage.local.set(pintKey);
   chrome.tabs.reload();
@@ -17,7 +17,7 @@ export function pintSet(setting, value) {
  *  @param {string} value - Color to replace the current color with
  */
 export function pintSetNoReload(setting, value) {
-  var pintKey = {};
+  const pintKey = {};
   pintKey[`${setting}`] = value;
   chrome.storage.local.set(pintKey);
 }
@@ -38,7 +38,7 @@ export function pintGetUpdate(setting, func) {
  *  @param {string} color - Color to replace the current color with
  */
 export function updateMultiple(settings, color) {
-  for (var i = 0; i < settings.length; i++) {
+  for (let i = 0; i < settings.length; i++) {
     pintSetNoReload(settings[i], color);
   }
 }

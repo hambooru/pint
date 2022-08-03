@@ -1,5 +1,5 @@
-/*global chrome*/
-var link = document.createElement("link");
+/* global chrome */
+const link = document.createElement("link");
 link.href = chrome.extension.getURL("pint-css.css");
 link.type = "text/css";
 link.rel = "stylesheet";

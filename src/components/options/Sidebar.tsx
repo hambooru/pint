@@ -21,12 +21,15 @@ import {
   AiFillClockCircle,
   AiFillCloseCircle,
   AiFillHeart,
+  AiOutlineSearch,
 } from "react-icons/ai";
 import { MdFormatColorText, MdTextSnippet } from "react-icons/md";
 import * as settings from "../../methods/config/colorGroups.js";
 import * as scales from "../../methods/helpers/scaleHelper.js";
 import chroma from "chroma-js";
 import { FcIdea } from "react-icons/fc";
+import { BiReset } from "react-icons/bi";
+import * as baseSettings from "../../methods/config/settings";
 
 var defaultValue = "#c0ffee";
 
@@ -35,7 +38,19 @@ var defaultVariation = "default";
 
 var quickScheme: string[] = [];
 
-export default function QuickChange() {
+var defaultSettings = Object.entries(baseSettings.settings);
+
+interface Props {
+  color: string;
+  setColor: (type: string) => void;
+  filteredList: string[];
+  setFilter: (type: string[]) => void;
+  setting: string[];
+}
+
+export default function Sidebar(props: Props) {
+  var { color, setColor, setFilter, setting } = props;
+
   react.useLayoutEffect(() => {
     pintGetUpdate(settings.cg46_6e7681[0], setScaleGray);
     pintGetUpdate(settings.cg67_bb8009[0], setScaleYellow);
@@ -52,8 +67,6 @@ export default function QuickChange() {
     quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
   });
 
-  const [color, setColor] = react.useState(`${defaultValue}`);
-
   // scale colors
   const [scaleGray, setScaleGray] = react.useState(`${defaultValue}`);
 
@@ -64,71 +77,72 @@ export default function QuickChange() {
   function paintGray() {
     updateSpecific(color, 0, 0, scales.gray);
     setScaleGray(color);
-    chrome.tabs.reload();
+    setColor(color);
   }
 
   const [scaleYellow, setScaleYellow] = react.useState(`${defaultValue}`);
 
   function paintYellow() {
     updateSpecific(color, 0, 0, scales.yellow);
-    setScaleYellow(color);
-    chrome.tabs.reload();
+    setScaleGray(color);
+    setColor(color);
   }
 
   const [scaleBlue, setScaleBlue] = react.useState(`${defaultValue}`);
 
   function paintBlue() {
     updateSpecific(color, 0, 0, scales.blue);
-    setScaleBlue(color);
-    chrome.tabs.reload();
+    setScaleGray(color);
+    setColor(color);
   }
 
   const [scaleGreen, setScaleGreen] = react.useState(`${defaultValue}`);
 
   function paintGreen() {
     updateSpecific(color, 0, 0, scales.green);
-    setScaleGreen(color);
-    chrome.tabs.reload();
+    setScaleGray(color);
+    setColor(color);
   }
 
   const [scaleRed, setScaleRed] = react.useState(`${defaultValue}`);
 
   function paintRed() {
     updateSpecific(color, 0, 0, scales.red);
-    setScaleRed(color);
-    chrome.tabs.reload();
+    setScaleGray(color);
+    setColor(color);
   }
 
   const [scalePurple, setScalePurple] = react.useState(`${defaultValue}`);
 
   function paintPurple() {
     updateSpecific(color, 0, 0, scales.purple);
-    setScalePurple(color);
-    chrome.tabs.reload();
+    setScaleGray(color);
+    setColor(color);
   }
 
   const [scalePink, setScalePink] = react.useState(`${defaultValue}`);
 
   function paintPink() {
     updateSpecific(color, 0, 0, scales.pink);
-    setScalePink(color);
-    chrome.tabs.reload();
+    setScaleGray(color);
+    setColor(color);
   }
 
   const [scaleCalendar, setScaleCalendar] = react.useState(`${defaultValue}`);
 
   function paintCalendar() {
     updateSpecific(color, 0, 0, scales.calendar);
-    setScaleCalendar(color);
-    chrome.tabs.reload();
+    setScaleGray(color);
+    setColor(color);
   }
 
   const [scaleText, setScaleText] = react.useState(`${defaultValue}`);
 
   function paintText() {
     updateMultiple(settings.cg106_ffffff, chroma(color).hex());
-    setScaleText(color);
-    chrome.tabs.reload();
+    setScaleGray(color);
+    setColor(color);
+    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
   }
 
   function setDefault() {
@@ -196,7 +210,7 @@ export default function QuickChange() {
     pintGetUpdate(settings.cg60_a371f7[0], setScalePurple);
     pintGetUpdate(settings.cg19_26a641[0], setScaleCalendar);
     pintGetUpdate(settings.cg106_ffffff[0], setScaleText);
-    chrome.tabs.reload();
+    setColor(color);
   }
 
   function updateColor(color: string) {
@@ -214,9 +228,40 @@ export default function QuickChange() {
     }
   }
 
+  function resetAll() {
+    defaultSettings.forEach((setting) => {
+      pintSetNoReload(setting[0], setting[1]);
+    });
+    chrome.tabs.reload();
+  }
+
+  function settingsFilter(searchquery: string) {
+    if (searchquery === "") {
+      setFilter(setting);
+    } else {
+      // replace all spaces with underscores
+      let filteredsearch = searchquery.replace(/\s/g, "_");
+      setFilter(setting.filter((s) => s.includes(filteredsearch)));
+    }
+  }
+
   return (
-    <div>
-      <div className="pint flex flex-row  mx-2 mt-2 mb-1">
+    <aside className="w-[428px] sticky flex left-0 top-0 flex-col h-screen ">
+      <div className="flex flex-col rounded-lg mb-1 mt-2 mx-3 pt-[82px]">
+        <div className="flex-1 flex-col rounded-[6px] bg-[#161b22] border-solid border-[#30363d] border-2 ">
+          <div className="flex flex-row justify-content text-left text-white justify-left items-center mt-2 ml-2 mb-2">
+            <AiOutlineSearch className="mx-1" />
+            <input
+              id="aaa"
+              type="text"
+              className="p-1 text-white  w-full bg-[#161b22] text-left"
+              placeholder="Search or jump to..."
+              onChange={(e) => settingsFilter(e.target.value)}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="w-[410px] pint flex flex-row  mx-2 mb-1">
         <div className="flex-1 flex-col rounded-[6px] m-1 bg-[#010409] border-solid border-[#30363d] border-2 ">
           <div className="flex flex-row justify-content text-left text-white justify-left items-center rounded-t-[6px] bg-[#161b22] p-1">
             <BsFillPaletteFill className="mx-1" size={15} />
@@ -389,6 +434,17 @@ export default function QuickChange() {
           </div>
         </div>
       </div>
+      <div className="flex flex-col rounded-lg mb-2 mx-3">
+        <div className="flex-1 flex-col rounded-[6px] bg-[#3a0606] border-solid border-[#6d1616] border-2 ">
+          <button
+            className="flex flex-row justify-content text-left text-white justify-left items-center  mt-2 ml-2 mb-2"
+            onClick={resetAll}
+          >
+            <BiReset className="mx-1" />
+            <p className="text-semibold">Reset everything to defaults</p>
+          </button>
+        </div>
+      </div>
       <div className="flex flex-col rounded-lg mb-3 mx-3">
         <div className="flex-1 flex-col rounded-[6px] bg-[#06193a] border-solid border-[#163e6d] border-2 ">
           <button
@@ -537,6 +593,6 @@ export default function QuickChange() {
           </div>
         </div>
       </div>
-    </div>
+    </aside>
   );
 }

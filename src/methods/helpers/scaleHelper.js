@@ -6,7 +6,7 @@ import * as settings from "../config/colorGroups.js";
 import { updateMultiple } from "./storageHelper.js";
 
 // ----------- ASSIGNABLES -----------
-export let orange = [
+export const orange = [
   settings.cg28_3d1300,
   settings.cg39_5a1e02,
   settings.cg47_762d0a,
@@ -19,7 +19,7 @@ export let orange = [
   settings.cg105_ffdfb6,
 ];
 
-export let yellow = [
+export const yellow = [
   settings.cg23_341a00,
   settings.cg34_4b2900,
   settings.cg44_693e00,
@@ -32,7 +32,7 @@ export let yellow = [
   settings.cg90_f8e3a1,
 ];
 
-export let gray = [
+export const gray = [
   settings.cg8_0d1117,
   settings.cg13_161b22,
   settings.cg17_21262d,
@@ -45,7 +45,7 @@ export let gray = [
   settings.cg84_f0f6fc,
 ];
 
-export let blue = [
+export const blue = [
   settings.cg6_051d4d,
   settings.cg7_0c2d6b,
   settings.cg9_0d419d,
@@ -58,7 +58,7 @@ export let blue = [
   settings.cg72_cae8ff,
 ];
 
-export let green = [
+export const green = [
   settings.cg5_04260f,
   settings.cg4_033a16,
   settings.cg11_0f5323,
@@ -71,7 +71,7 @@ export let green = [
   settings.cg63_aff5b4,
 ];
 
-export let red = [
+export const red = [
   settings.cg33_490202,
   settings.cg43_67060c,
   settings.cg56_8e1519,
@@ -84,7 +84,7 @@ export let red = [
   settings.cg103_ffdcd7,
 ];
 
-export let purple = [
+export const purple = [
   settings.cg20_271052,
   settings.cg27_3c1e70,
   settings.cg35_553098,
@@ -97,7 +97,7 @@ export let purple = [
   settings.cg82_eddeff,
 ];
 
-export let pink = [
+export const pink = [
   settings.cg30_42062a,
   settings.cg40_5e103e,
   settings.cg50_7d2457,
@@ -110,7 +110,7 @@ export let pink = [
   settings.cg102_ffdaec,
 ];
 
-export let coral = [
+export const coral = [
   settings.cg31_460701,
   settings.cg42_640D04,
   settings.cg53_872012,
@@ -123,7 +123,7 @@ export let coral = [
   settings.cg105_ffdfb6,
 ];
 
-export let calendar = [
+export const calendar = [
   settings.cg10_0e4429,
   settings.cg2_006d32,
   settings.cg19_26a641,
@@ -224,7 +224,7 @@ export function updateAccent(color) {
 }
 
 export function generateScheme(color, scheme, variation, distance) {
-  let s = new ColorScheme();
+  const s = new ColorScheme();
   if (scheme === "analogic") {
     s.from_hex(chroma(color).hex().slice(-6))
       .scheme(scheme)
@@ -242,7 +242,7 @@ export function generateScheme(color, scheme, variation, distance) {
 }
 
 export function generateSaturation(color, setting) {
-  let colors = [];
+  const colors = [];
   for (let i = 0; i < 10; i++) {
     /^\d/.test(color.slice(-4))
       ? colors.push(
