@@ -64,63 +64,71 @@ export default function QuickChange() {
   function paintGray() {
     updateSpecific(color, 0, 0, scales.gray);
     setScaleGray(color);
+    chrome.tabs.reload();
   }
 
   const [scaleYellow, setScaleYellow] = react.useState(`${defaultValue}`);
 
   function paintYellow() {
     updateSpecific(color, 0, 0, scales.yellow);
-    setScaleGray(color);
+    setScaleYellow(color);
+    chrome.tabs.reload();
   }
 
   const [scaleBlue, setScaleBlue] = react.useState(`${defaultValue}`);
 
   function paintBlue() {
     updateSpecific(color, 0, 0, scales.blue);
-    setScaleGray(color);
+    setScaleBlue(color);
+    chrome.tabs.reload();
   }
 
   const [scaleGreen, setScaleGreen] = react.useState(`${defaultValue}`);
 
   function paintGreen() {
     updateSpecific(color, 0, 0, scales.green);
-    setScaleGray(color);
+    setScaleGreen(color);
+    chrome.tabs.reload();
   }
 
   const [scaleRed, setScaleRed] = react.useState(`${defaultValue}`);
 
   function paintRed() {
     updateSpecific(color, 0, 0, scales.red);
-    setScaleGray(color);
+    setScaleRed(color);
+    chrome.tabs.reload();
   }
 
   const [scalePurple, setScalePurple] = react.useState(`${defaultValue}`);
 
   function paintPurple() {
     updateSpecific(color, 0, 0, scales.purple);
-    setScaleGray(color);
+    setScalePurple(color);
+    chrome.tabs.reload();
   }
 
   const [scalePink, setScalePink] = react.useState(`${defaultValue}`);
 
   function paintPink() {
     updateSpecific(color, 0, 0, scales.pink);
-    setScaleGray(color);
+    setScalePink(color);
+    chrome.tabs.reload();
   }
 
   const [scaleCalendar, setScaleCalendar] = react.useState(`${defaultValue}`);
 
   function paintCalendar() {
     updateSpecific(color, 0, 0, scales.calendar);
-    setScaleGray(color);
+    setScaleCalendar(color);
+    chrome.tabs.reload();
   }
 
   const [scaleText, setScaleText] = react.useState(`${defaultValue}`);
 
   function paintText() {
     updateMultiple(settings.cg106_ffffff, chroma(color).hex());
-    setScaleGray(color);
-    quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
+    setScaleText(color);
+    chrome.tabs.reload();
   }
 
   function setDefault() {
@@ -188,6 +196,7 @@ export default function QuickChange() {
     pintGetUpdate(settings.cg60_a371f7[0], setScalePurple);
     pintGetUpdate(settings.cg19_26a641[0], setScaleCalendar);
     pintGetUpdate(settings.cg106_ffffff[0], setScaleText);
+    chrome.tabs.reload();
   }
 
   function updateColor(color: string) {

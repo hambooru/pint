@@ -813,6 +813,12 @@ export var cg106_ffffff = [
   "__color_checks_line_dt_fm_text",
   "__color_fg_on_emphasis",
   "__color_scale_white",
+  "__color_primer_fg_disabled",
+  "__color_accent_fg",
+  "__color_fg_subtle",
+  "__color_fg_muted",
+  "__color_done_fg",
+  "__color_fg_default",
 ];
 
 // color group: 106 | default color: #ffffff0c

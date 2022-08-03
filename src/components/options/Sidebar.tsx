@@ -49,7 +49,7 @@ interface Props {
 }
 
 export default function Sidebar(props: Props) {
-  var { color, setColor, filteredList, setFilter, setting } = props;
+  var { color, setColor, setFilter, setting } = props;
 
   react.useLayoutEffect(() => {
     pintGetUpdate(settings.cg46_6e7681[0], setScaleGray);
