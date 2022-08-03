@@ -470,7 +470,11 @@ chrome.runtime.onInstalled.addListener(() => {
     key[`${initialSetting}`] = defaultColorScheme[initialSetting];
     chrome.storage.local.set(key);
   });
-  chrome.tabs.create({ url: "https://pint.sh/success" });
+  // open ./pint-newinstall/index.html in new page
+  chrome.tabs.create({
+    url: "./pint-newinstall/index.html",
+    active: true,
+  });
 });
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
