@@ -237,7 +237,7 @@ export default function QuickChange() {
           <div className="flex flex-row justify-content text-left text-white justify-left items-center rounded-t-[6px] bg-[#161b22] p-1">
             <BsFillBrushFill className="mx-1" size={15} />
             <div className="flex-start align-left text-l p-1 rounded-t-lg ">
-              <p className="text-semibold"> color painter </p>
+              <p className="text-semibold"> group painter </p>
             </div>
           </div>
           <div className="flex flex-row justify-content text-center text-white justify-center items-center p-1 mt-1">

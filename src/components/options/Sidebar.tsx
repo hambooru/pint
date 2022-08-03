@@ -21,6 +21,7 @@ import {
   AiFillClockCircle,
   AiFillCloseCircle,
   AiFillHeart,
+  AiOutlineSearch,
 } from "react-icons/ai";
 import { MdFormatColorText, MdTextSnippet } from "react-icons/md";
 import * as settings from "../../methods/config/colorGroups.js";
@@ -42,10 +43,13 @@ var defaultSettings = Object.entries(baseSettings.settings);
 interface Props {
   color: string;
   setColor: (type: string) => void;
+  filteredList: string[];
+  setFilter: (type: string[]) => void;
+  setting: string[];
 }
 
 export default function Sidebar(props: Props) {
-  var { color, setColor } = props;
+  var { color, setColor, filteredList, setFilter, setting } = props;
 
   react.useLayoutEffect(() => {
     pintGetUpdate(settings.cg46_6e7681[0], setScaleGray);
@@ -231,9 +235,33 @@ export default function Sidebar(props: Props) {
     chrome.tabs.reload();
   }
 
+  function settingsFilter(searchquery: string) {
+    if (searchquery === "") {
+      setFilter(setting);
+    } else {
+      // replace all spaces with underscores
+      let filteredsearch = searchquery.replace(/\s/g, "_");
+      setFilter(setting.filter((s) => s.includes(filteredsearch)));
+    }
+  }
+
   return (
     <aside className="w-[428px] sticky flex left-0 top-0 flex-col h-screen ">
-      <div className="w-[410px] pint flex flex-row  mx-2 mt-2 mb-1 pt-[78px]">
+      <div className="flex flex-col rounded-lg mb-1 mt-2 mx-3 pt-[82px]">
+        <div className="flex-1 flex-col rounded-[6px] bg-[#161b22] border-solid border-[#30363d] border-2 ">
+          <div className="flex flex-row justify-content text-left text-white justify-left items-center mt-2 ml-2 mb-2">
+            <AiOutlineSearch className="mx-1" />
+            <input
+              id="aaa"
+              type="text"
+              className="p-1 text-white  w-full bg-[#161b22] text-left"
+              placeholder="Search or jump to..."
+              onChange={(e) => settingsFilter(e.target.value)}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="w-[410px] pint flex flex-row  mx-2 mb-1">
         <div className="flex-1 flex-col rounded-[6px] m-1 bg-[#010409] border-solid border-[#30363d] border-2 ">
           <div className="flex flex-row justify-content text-left text-white justify-left items-center rounded-t-[6px] bg-[#161b22] p-1">
             <BsFillPaletteFill className="mx-1" size={15} />
@@ -263,7 +291,7 @@ export default function Sidebar(props: Props) {
           <div className="flex flex-row justify-content text-left text-white justify-left items-center rounded-t-[6px] bg-[#161b22] p-1">
             <BsFillBrushFill className="mx-1" size={15} />
             <div className="flex-start align-left text-l p-1 rounded-t-lg ">
-              <p className="text-semibold"> color painter </p>
+              <p className="text-semibold"> group painter </p>
             </div>
           </div>
           <div className="flex flex-row justify-content text-center text-white justify-center items-center p-1 mt-1">

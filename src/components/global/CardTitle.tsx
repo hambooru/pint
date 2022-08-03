@@ -1,9 +1,8 @@
 import "../../assets/styles/App.css";
-import chroma from "chroma-js";
 interface Props {
   name: string;
   color?: string;
-  textcolor?: string | "#ffffff";
+  textcolor?: string | "#000000";
   className?: string;
 }
 
