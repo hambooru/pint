@@ -6,8 +6,6 @@
 
 <hr>
 
-> 💡 You are currently looking at the rebranded version of pint which is currently unreleased, the released one is located [here](https://github.com/fuwaa/pint/tree/v1)
-
 [pint](https://projects.fuwa.sh/pint/) is a theming engine that allows you to theme your github experience.
 
 ![image](https://user-images.githubusercontent.com/53419401/182528225-8f1b8d54-2e7a-4a5c-a8de-6671e7585dc6.png)
