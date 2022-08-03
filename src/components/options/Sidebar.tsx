@@ -27,6 +27,8 @@ import * as settings from "../../methods/config/colorGroups.js";
 import * as scales from "../../methods/helpers/scaleHelper.js";
 import chroma from "chroma-js";
 import { FcIdea } from "react-icons/fc";
+import { BiReset } from "react-icons/bi";
+import * as baseSettings from "../../methods/config/settings";
 
 var defaultValue = "#c0ffee";
 
@@ -34,6 +36,8 @@ var defaultScheme = "analogic";
 var defaultVariation = "default";
 
 var quickScheme: string[] = [];
+
+var defaultSettings = Object.entries(baseSettings.settings);
 
 interface Props {
   color: string;
@@ -69,6 +73,7 @@ export default function Sidebar(props: Props) {
   function paintGray() {
     updateSpecific(color, 0, 0, scales.gray);
     setScaleGray(color);
+    setColor(color);
   }
 
   const [scaleYellow, setScaleYellow] = react.useState(`${defaultValue}`);
@@ -76,6 +81,7 @@ export default function Sidebar(props: Props) {
   function paintYellow() {
     updateSpecific(color, 0, 0, scales.yellow);
     setScaleGray(color);
+    setColor(color);
   }
 
   const [scaleBlue, setScaleBlue] = react.useState(`${defaultValue}`);
@@ -83,6 +89,7 @@ export default function Sidebar(props: Props) {
   function paintBlue() {
     updateSpecific(color, 0, 0, scales.blue);
     setScaleGray(color);
+    setColor(color);
   }
 
   const [scaleGreen, setScaleGreen] = react.useState(`${defaultValue}`);
@@ -90,6 +97,7 @@ export default function Sidebar(props: Props) {
   function paintGreen() {
     updateSpecific(color, 0, 0, scales.green);
     setScaleGray(color);
+    setColor(color);
   }
 
   const [scaleRed, setScaleRed] = react.useState(`${defaultValue}`);
@@ -97,6 +105,7 @@ export default function Sidebar(props: Props) {
   function paintRed() {
     updateSpecific(color, 0, 0, scales.red);
     setScaleGray(color);
+    setColor(color);
   }
 
   const [scalePurple, setScalePurple] = react.useState(`${defaultValue}`);
@@ -104,6 +113,7 @@ export default function Sidebar(props: Props) {
   function paintPurple() {
     updateSpecific(color, 0, 0, scales.purple);
     setScaleGray(color);
+    setColor(color);
   }
 
   const [scalePink, setScalePink] = react.useState(`${defaultValue}`);
@@ -111,6 +121,7 @@ export default function Sidebar(props: Props) {
   function paintPink() {
     updateSpecific(color, 0, 0, scales.pink);
     setScaleGray(color);
+    setColor(color);
   }
 
   const [scaleCalendar, setScaleCalendar] = react.useState(`${defaultValue}`);
@@ -118,6 +129,7 @@ export default function Sidebar(props: Props) {
   function paintCalendar() {
     updateSpecific(color, 0, 0, scales.calendar);
     setScaleGray(color);
+    setColor(color);
   }
 
   const [scaleText, setScaleText] = react.useState(`${defaultValue}`);
@@ -125,6 +137,7 @@ export default function Sidebar(props: Props) {
   function paintText() {
     updateMultiple(settings.cg106_ffffff, chroma(color).hex());
     setScaleGray(color);
+    setColor(color);
     quickScheme = scaleHelper.generateScheme(color, scheme, variation, 0.5);
   }
 
@@ -193,6 +206,7 @@ export default function Sidebar(props: Props) {
     pintGetUpdate(settings.cg60_a371f7[0], setScalePurple);
     pintGetUpdate(settings.cg19_26a641[0], setScaleCalendar);
     pintGetUpdate(settings.cg106_ffffff[0], setScaleText);
+    setColor(color);
   }
 
   function updateColor(color: string) {
@@ -210,9 +224,16 @@ export default function Sidebar(props: Props) {
     }
   }
 
+  function resetAll() {
+    defaultSettings.forEach((setting) => {
+      pintSetNoReload(setting[0], setting[1]);
+    });
+    chrome.tabs.reload();
+  }
+
   return (
     <aside className="w-[428px] sticky flex left-0 top-0 flex-col h-screen ">
-      <div className="w-[410px] pint flex flex-row  mx-2 mt-2 mb-1 pt-[80px]">
+      <div className="w-[410px] pint flex flex-row  mx-2 mt-2 mb-1 pt-[78px]">
         <div className="flex-1 flex-col rounded-[6px] m-1 bg-[#010409] border-solid border-[#30363d] border-2 ">
           <div className="flex flex-row justify-content text-left text-white justify-left items-center rounded-t-[6px] bg-[#161b22] p-1">
             <BsFillPaletteFill className="mx-1" size={15} />
@@ -383,15 +404,17 @@ export default function Sidebar(props: Props) {
               </p>
             </button>
           </div>
-          {/* <div className="flex-start align-left text-l  mb-1 rounded-t-lg text-blue">
-            <p className="">Not Enough Settings?</p>
-          </div>
-          <div className="flex-start align-left text-l  mb-2 rounded-t-lg text-blue-600 ">
-            <p className="">All Settings</p>
-          </div>
-          <div className="flex-1 flex-col rounded-[6px] bg-[#06193a] border-solid border-[#163e6d] border-2 justify-center mt-2">
-            <p className="text-center">Made with ❤️ - fuwa</p>
-          </div> */}
+        </div>
+      </div>
+      <div className="flex flex-col rounded-lg mb-2 mx-3">
+        <div className="flex-1 flex-col rounded-[6px] bg-[#3a0606] border-solid border-[#6d1616] border-2 ">
+          <button
+            className="flex flex-row justify-content text-left text-white justify-left items-center  mt-2 ml-2 mb-2"
+            onClick={resetAll}
+          >
+            <BiReset className="mx-1" />
+            <p className="text-semibold">Reset everything to defaults</p>
+          </button>
         </div>
       </div>
       <div className="flex flex-col rounded-lg mb-3 mx-3">

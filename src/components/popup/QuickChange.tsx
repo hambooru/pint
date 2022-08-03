@@ -378,15 +378,6 @@ export default function QuickChange() {
               </p>
             </button>
           </div>
-          {/* <div className="flex-start align-left text-l  mb-1 rounded-t-lg text-blue">
-            <p className="">Not Enough Settings?</p>
-          </div>
-          <div className="flex-start align-left text-l  mb-2 rounded-t-lg text-blue-600 ">
-            <p className="">All Settings</p>
-          </div>
-          <div className="flex-1 flex-col rounded-[6px] bg-[#06193a] border-solid border-[#163e6d] border-2 justify-center mt-2">
-            <p className="text-center">Made with ❤️ - fuwa</p>
-          </div> */}
         </div>
       </div>
       <div className="flex flex-col rounded-lg mb-3 mx-3">

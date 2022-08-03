@@ -1,13 +1,17 @@
 import react from "react";
 import "../../assets/styles/App.css";
 import { IoIosBrush } from "react-icons/io";
+import { BiReset } from "react-icons/bi";
 import CardTitle from "../global/CardTitle";
 import {
   pintSetNoReload,
   pintGetUpdate,
 } from "../../methods/helpers/storageHelper";
+import { settings } from "../../methods/config/settings";
 
 var defaultValue = "#c0ffee";
+
+var settingsList = Object.entries(settings);
 
 interface Props {
   settingName: string;
@@ -38,6 +42,15 @@ export default function ChangeCard(props: Props) {
     pintSetNoReload(settingName, value);
   }
 
+  function resetDefaults() {
+    // get default value from settingsList
+    var defaults = settingsList.find(
+      (setting) => setting[0] === settingName
+    )[1];
+    setCurrent(defaults);
+    pintSetNoReload(settingName, defaults);
+  }
+
   return (
     <div className="pint flex flex-row w-[260px] text-center">
       <div className="flex-1 flex-col rounded-[6px] m-1 p-1 bg-[#010409] border-solid border-[#30363d] border-2">
@@ -55,10 +68,17 @@ export default function ChangeCard(props: Props) {
           </div>
           <button
             title="updateColor"
-            className="bg-[#0041c4] hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 p-2 ml-2 mx-2 my-1 rounded-full text-white"
+            className="bg-[#0041c4] hover:bg-[#004de5] active:bg-[#0035A0]focus:outline-none focus:ring focus:ring-violet-300 px-1 my-2 mx-1  rounded-full text-white"
             onClick={updateColor}
           >
             <IoIosBrush className="text-xl p-1 text-white" />
+          </button>
+          <button
+            title="Reset to defaults"
+            className="bg-[#3a3a3a] hover:bg-[#585858] active:bg-[#272727]focus:outline-none focus:ring focus:ring-violet-300 px-1 my-2 mx-1 rounded-full text-white"
+            onClick={resetDefaults}
+          >
+            <BiReset className="text-xl p-1 text-white" />
           </button>
         </div>
       </div>

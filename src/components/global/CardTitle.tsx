@@ -12,7 +12,7 @@ export default function CardTitle(props: Props) {
   return (
     <div
       style={{ backgroundColor: textcolor }}
-      className={`flex-start align-left text-white text-l p-1 rounded-t-[6px]`}
+      className={`flex-start align-left text-white text-l p-1 rounded-t-[4px]`}
     >
       <p className="text-bold">
         {name} {color}

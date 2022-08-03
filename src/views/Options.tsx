@@ -5,7 +5,6 @@ import "../methods/config/settings.js";
 import { settings } from "../methods/config/settings";
 import ChangeCard from "../components/options/ChangeCard";
 import react from "react";
-import chroma from "chroma-js";
 import Sidebar from "../components/options/Sidebar";
 
 var settingsList = Object.keys(settings);
