@@ -50,7 +50,7 @@ you can install this extension via the chrome web store (old version) or manuall
 
 ## roadmap
 
-please check [issues](https://github.com/fuwaa/pint/issues) for planned aditions, feature requests, bugs and more information.
+please check [issues](https://github.com/fuwaa/pint/issues) for planned additions, feature requests, bugs and more information.
 
 alternatively, you can also open a [new issue](https://github.com/fuwaa/pint/issues/new) to add to it!
 
