@@ -73,5 +73,5 @@ contributions are welcome ❤️. however, please do keep in mind that this is a
 
 ###### This extension is licensed under the GPLv3 License.
 
-###### This project is not affiliated, associated, authorized, endorsed by, or in any way officially connected with GitHub, Inc. and Git, or any of its subsidiaries or its affiliates.
+###### This project is not affiliated, associated, endorsed by, or in any way officially connected with GitHub, Inc. and Git, or any of its subsidiaries or its affiliates.
 
