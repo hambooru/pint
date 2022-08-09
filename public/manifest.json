@@ -21,48 +21,27 @@
     "name": "Jariel Que",
     "url": "https://github.com/fuwaa"
   },
-  "host_permissions": [
-    "https://*.github.com/"
-  ],
+  "host_permissions": ["https://*.github.com/"],
   "content_scripts": [
     {
       "run_at": "document_start",
-      "matches": [
-        "https://*.github.com/*"
-      ],
-      "css": [
-        "pint-css.css"
-      ],
-      "js": [
-        "initial.js"
-      ]
+      "matches": ["https://*.github.com/*"],
+      "css": ["pint-css.css"],
+      "js": ["initial.js"]
     },
     {
       "run_at": "document_end",
-      "matches": [
-        "https://*.github.com/*"
-      ],
-      "js": [
-        "initial.js"
-      ],
-      "css": [
-        "unhide.css"
-      ]
+      "matches": ["https://*.github.com/*"],
+      "js": ["initial.js"],
+      "css": ["unhide.css"]
     },
     {
       "run_at": "document_idle",
-      "matches": [
-        "https://*.github.com/*"
-      ],
-      "js": [
-        "initial.js"
-      ]
+      "matches": ["https://*.github.com/*"],
+      "js": ["initial.js"]
     }
   ],
-  "permissions": [
-    "storage",
-    "scripting"
-  ],
+  "permissions": ["storage", "scripting"],
   "background": {
     "service_worker": "background.js"
   },
