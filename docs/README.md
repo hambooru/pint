@@ -23,7 +23,7 @@
 
 ## installation
 
-you can install this extension via the chrome web store (old version) or manually.
+you can install this extension via the chrome web store or manually.
 
 ### chrome web store installation
 <a href="https://chrome.google.com/webstore/detail/gitccentify/mjhmdkcefcklflcmmokoahfdodcpeobg"><img src="https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png" /></a>
