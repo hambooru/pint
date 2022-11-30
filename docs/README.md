@@ -1,3 +1,5 @@
+##### 💔 Pint is now retired. It's sad to see one of my own projects to go to the history books, but maybe it's our memories with Pint that never goes away. Thank you for all the support of this project and the friends we've made along the way.
+
 # <a  href="https://projects.fuwa.sh/pint/"><img align="left" height="100" src="/docs/assets/pint-logo.png"/></a> **Pint** for GitHub
 
 ![pint-status](https://img.shields.io/badge/pint%20src-2.0-green)
