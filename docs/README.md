@@ -10,8 +10,6 @@
 
 [pint](https://projects.fuwa.sh/pint/) is a theming engine that allows you to theme your github experience.
 
-![1](https://user-images.githubusercontent.com/53419401/182546037-c944fca4-f9b9-438f-aa7b-4e418807e0e8.png)
-
 
 ### project features
 - Complete control of personalisation of every element.
